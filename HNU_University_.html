@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HABEEB NIHMATHULLAH UNIVERSITY | HNU</title>
+
+<style>
+:root{
+  --navy:#071a35;
+  --navy2:#0d2b52;
+  --gold:#c9a227;
+  --gold2:#e9d27a;
+  --light:#f5f7fa;
+  --white:#fff;
+  --text:#26364a;
+  --muted:#667085;
+  --border:#e3e7ed;
+  --shadow:0 10px 30px rgba(7,26,53,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  line-height:1.6;
+  background:#fff;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1180px,92%);margin:auto}
+
+.topbar{
+  background:var(--navy);
+  color:#fff;
+  font-size:13px;
+  padding:8px 0;
+}
+.topbar .container{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+header{
+  background:#fff;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+.navbar{
+  min-height:78px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo-mark{
+  width:50px;height:50px;
+  border-radius:50%;
+  background:var(--navy);
+  border:3px solid var(--gold);
+  display:grid;
+  place-items:center;
+  color:var(--gold2);
+  font-weight:900;
+  font-size:17px;
+}
+.logo h1{
+  color:var(--navy);
+  font-size:19px;
+  line-height:1.1;
+}
+.logo small{
+  color:var(--gold);
+  font-weight:bold;
+  letter-spacing:1px;
+}
+.nav-links{
+  display:flex;
+  list-style:none;
+  gap:22px;
+  align-items:center;
+}
+.nav-links a{
+  font-size:14px;
+  font-weight:700;
+  color:var(--navy);
+  padding:8px 0;
+  position:relative;
+}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:after{
+  content:"";
+  position:absolute;
+  left:0;bottom:0;
+  width:0;height:2px;
+  background:var(--gold);
+  transition:.25s;
+}
+.nav-links a:hover:after{width:100%}
+.menu-btn{
+  display:none;
+  border:0;background:var(--navy);color:#fff;
+  padding:10px 13px;border-radius:6px;
+  font-size:20px;cursor:pointer;
+}
+
+.hero{
+  min-height:600px;
+  display:flex;
+  align-items:center;
+  background:
+    linear-gradient(rgba(7,26,53,.82),rgba(7,26,53,.72)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+  color:#fff;
+}
+.hero-content{max-width:760px;padding:80px 0}
+.hero .badge{
+  display:inline-block;
+  border:1px solid var(--gold2);
+  color:var(--gold2);
+  padding:7px 14px;
+  border-radius:30px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+.hero h2{
+  font-size:clamp(38px,6vw,68px);
+  line-height:1.05;
+  margin-bottom:20px;
+}
+.hero h2 span{color:var(--gold2)}
+.hero p{
+  font-size:18px;
+  color:#e9eef5;
+  max-width:680px;
+  margin-bottom:30px;
+}
+.btn{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--navy);
+  padding:13px 22px;
+  border-radius:6px;
+  font-weight:800;
+  border:2px solid var(--gold);
+  transition:.25s;
+}
+.btn:hover{background:transparent;color:#fff}
+.btn-outline{
+  margin-left:10px;
+  background:transparent;
+  color:#fff;
+  border-color:#fff;
+}
+.btn-outline:hover{background:#fff;color:var(--navy)}
+
+section{padding:75px 0}
+.section-head{text-align:center;margin-bottom:42px}
+.section-head h2{
+  color:var(--navy);
+  font-size:34px;
+  margin-bottom:8px;
+}
+.section-head p{color:var(--muted)}
+
+.quick-section{padding:28px 0;background:#fff}
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:14px;
+}
+.quick-card{
+  border:1px solid var(--border);
+  padding:18px 10px;
+  border-radius:9px;
+  text-align:center;
+  font-weight:800;
+  font-size:13px;
+  color:var(--navy);
+  transition:.25s;
+  background:#fff;
+}
+.quick-card span{display:block;font-size:25px;margin-bottom:5px}
+.quick-card:hover{
+  transform:translateY(-4px);
+  border-color:var(--gold);
+  box-shadow:var(--shadow);
+}
+
+.about{background:var(--light)}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+.about-image img{
+  width:100%;
+  height:400px;
+  object-fit:cover;
+  border-radius:14px;
+  box-shadow:var(--shadow);
+}
+.about-text h2{font-size:36px;color:var(--navy);margin-bottom:15px}
+.about-text p{color:var(--muted);margin-bottom:14px}
+.about-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:20px;
+}
+.about-points div{
+  padding:12px;
+  background:#fff;
+  border-left:4px solid var(--gold);
+  font-weight:700;
+  font-size:14px;
+}
+
+.admin-section{background:#fff}
+.admin-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.admin-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:25px 18px;
+  text-align:center;
+  box-shadow:0 6px 24px rgba(0,0,0,.06);
+  transition:.25s;
+}
+.admin-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+  box-shadow:0 14px 32px rgba(0,0,0,.10);
+}
+.admin-photo{
+  width:95px;height:95px;border-radius:50%;
+  margin:0 auto 15px;
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  border:4px solid var(--gold);
+  display:grid;place-items:center;
+  color:var(--gold2);
+  font-size:30px;font-weight:800;
+}
+.admin-card h3{color:var(--navy);font-size:17px;margin-bottom:5px}
+.admin-card .role{
+  color:var(--gold);
+  font-size:13px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.admin-card p{color:var(--muted);font-size:13px;margin-top:8px}
+
+.departments{background:var(--light)}
+.search-box{
+  max-width:600px;
+  margin:0 auto 30px;
+  position:relative;
+}
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  outline:none;
+  font-size:15px;
+}
+.search-box input:focus{border-color:var(--gold)}
+.dept-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+.dept-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:11px;
+  padding:22px 16px;
+  text-align:center;
+  cursor:pointer;
+  transition:.25s;
+  box-shadow:0 4px 15px rgba(0,0,0,.04);
+}
+.dept-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--gold);
+  box-shadow:0 12px 28px rgba(0,0,0,.1);
+}
+.dept-icon{
+  width:65px;height:65px;
+  border-radius:50%;
+  margin:0 auto 13px;
+  background:#fff7d9;
+  border:2px solid var(--gold);
+  display:grid;place-items:center;
+  font-size:28px;
+}
+.dept-card h3{color:var(--navy);font-size:16px}
+.dept-card p{color:var(--gold);font-size:12px;font-weight:bold;margin-top:5px}
+
+.programs{background:#fff}
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.program-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:28px;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+.program-card h3{color:var(--navy);margin-bottom:10px}
+.program-card p{color:var(--muted);font-size:14px}
+.program-card .tag{
+  display:inline-block;
+  margin-top:15px;
+  background:#fff7d9;
+  color:#765b00;
+  padding:5px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.activities-section{background:#f5f7fa}
+.activities-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.activity-card{
+  background:white;
+  border:1px solid #e3e7ed;
+  border-radius:12px;
+  padding:25px 18px;
+  text-align:center;
+  transition:.3s;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+.activity-card:hover{
+  transform:translateY(-7px);
+  border-color:#c9a227;
+  box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+.activity-icon{
+  width:70px;height:70px;
+  margin:0 auto 15px;
+  border-radius:50%;
+  background:#fff7d9;
+  border:2px solid #c9a227;
+  display:grid;place-items:center;
+  font-size:32px;
+}
+.activity-card h3{color:#071a35;margin-bottom:7px}
+.activity-card p{color:#667085;font-size:14px}
+.sports-highlight{
+  margin-top:40px;
+  background:#071a35;
+  color:white;
+  border-radius:15px;
+  padding:35px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+.sports-highlight h3{color:#e9d27a;font-size:28px;margin-bottom:12px}
+.sports-highlight p{color:#dce3ed}
+.sports-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.sports-list div{
+  padding:12px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:7px;
+  color:white;
+}
+
+.admission{
+  background:var(--navy);
+  color:#fff;
+}
+.admission-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+.admission-image img{
+  height:430px;
+  width:100%;
+  object-fit:cover;
+  border-radius:14px;
+}
+.admission h2{font-size:38px;color:var(--gold2);margin-bottom:12px}
+.admission p{color:#dce3ed;margin-bottom:20px}
+.admission-list{
+  list-style:none;
+  margin:20px 0;
+}
+.admission-list li{
+  margin:9px 0;
+  color:#fff;
+}
+.admission-list li:before{
+  content:"✓";
+  color:var(--gold2);
+  font-weight:bold;
+  margin-right:10px;
+}
+.form{
+  background:#fff;
+  padding:25px;
+  border-radius:12px;
+  margin-top:25px;
+}
+.form h3{color:var(--navy);margin-bottom:15px}
+.form input,.form select{
+  width:100%;
+  padding:12px;
+  margin:6px 0;
+  border:1px solid var(--border);
+  border-radius:6px;
+  outline:none;
+}
+.form button{
+  width:100%;
+  padding:12px;
+  margin-top:8px;
+  border:0;
+  background:var(--gold);
+  color:var(--navy);
+  font-weight:800;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.news{background:#fff}
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.news-card{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 5px 18px rgba(0,0,0,.05);
+}
+.news-card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+.news-content{padding:20px}
+.news-date{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:bold;
+}
+.news-card h3{color:var(--navy);margin:7px 0}
+.news-card p{font-size:14px;color:var(--muted)}
+
+.contact{background:var(--light)}
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+}
+.contact-card{
+  background:#fff;
+  padding:28px;
+  border-radius:12px;
+  border:1px solid var(--border);
+}
+.contact-item{
+  display:flex;
+  gap:14px;
+  margin:20px 0;
+}
+.contact-item span{font-size:25px}
+.contact-item h4{color:var(--navy)}
+.contact-item p{color:var(--muted);font-size:14px}
+
+footer{
+  background:#041126;
+  color:#cbd5e1;
+  padding:45px 0 20px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:35px;
+}
+footer h3{color:var(--gold2);margin-bottom:12px}
+footer p,footer li{font-size:13px;color:#aeb9c9}
+footer ul{list-style:none}
+footer li{margin:8px 0}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:30px;
+  padding-top:18px;
+  text-align:center;
+  font-size:12px;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  z-index:2000;
+  padding:25px;
+  overflow:auto;
+}
+.modal-box{
+  max-width:720px;
+  background:#fff;
+  margin:5vh auto;
+  border-radius:14px;
+  padding:32px;
+  position:relative;
+}
+.close{
+  position:absolute;
+  right:18px;top:12px;
+  font-size:28px;
+  cursor:pointer;
+  color:var(--muted);
+}
+.modal-box h2{color:var(--navy);margin-bottom:5px}
+.modal-box .modal-hod{
+  color:var(--gold);
+  font-weight:bold;
+  margin-bottom:18px;
+}
+.modal-box h3{color:var(--navy);margin:18px 0 6px}
+.modal-box p,.modal-box li{color:var(--muted);font-size:14px}
+.modal-box ul{padding-left:20px}
+.modal-apply{
+  display:inline-block;
+  margin-top:20px;
+  background:var(--gold);
+  color:var(--navy);
+  padding:11px 18px;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+@media(max-width:1050px){
+  .nav-links{gap:13px}
+  .dept-grid{grid-template-columns:repeat(3,1fr)}
+  .admin-grid{grid-template-columns:repeat(2,1fr)}
+  .activities-grid{grid-template-columns:repeat(2,1fr)}
+  .quick-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:850px){
+  .menu-btn{display:block}
+  .nav-links{
+    display:none;
+    position:absolute;
+    left:0;right:0;top:78px;
+    background:#fff;
+    padding:15px 5%;
+    flex-direction:column;
+    align-items:flex-start;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+  }
+  .nav-links.show{display:flex}
+  .about-grid,.admission-grid,.contact-grid{grid-template-columns:1fr}
+  .program-grid,.news-grid{grid-template-columns:1fr 1fr}
+  .sports-highlight{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  section{padding:55px 0}
+  .hero{min-height:560px}
+  .hero h2{font-size:40px}
+  .hero p{font-size:15px}
+  .btn{display:block;text-align:center;margin:8px 0}
+  .btn-outline{margin-left:0}
+  .quick-grid,.dept-grid,.program-grid,.news-grid,
+  .activities-grid,.admin-grid{grid-template-columns:1fr}
+  .about-points{grid-template-columns:1fr}
+  .sports-list{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .logo h1{font-size:15px}
+  .logo-mark{width:42px;height:42px;font-size:14px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="container">
+    <span>📍 Ramanathapuram, Tamil Nadu, India</span>
+    <span>📞 6374320835 &nbsp; | &nbsp; ✉️ habeebnihmathullah@gmail.com</span>
+  </div>
+</div>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo">
+      <div class="logo-mark">HNU</div>
+      <div>
+        <h1>HABEEB NIHMATHULLAH UNIVERSITY</h1>
+        <small>EXCELLENCE • KNOWLEDGE • FUTURE</small>
+      </div>
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" onclick="closeMenu()">Home</a></li>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#administration" onclick="closeMenu()">Administration</a></li>
+      <li><a href="#departments" onclick="closeMenu()">Departments</a></li>
+      <li><a href="#programs" onclick="closeMenu()">Programs</a></li>
+      <li><a href="#activities" onclick="closeMenu()">Sports & Activities</a></li>
+      <li><a href="#admissions" onclick="closeMenu()">Admissions</a></li>
+      <li><a href="#news" onclick="closeMenu()">News</a></li>
+      <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <span class="badge">WELCOME TO HNU</span>
+      <h2>Building Knowledge.<br><span>Creating Futures.</span></h2>
+      <p>
+        HABEEB NIHMATHULLAH UNIVERSITY is a modern learning community
+        focused on academic excellence, innovation, leadership and
+        holistic student development.
+      </p>
+      <a href="#admissions" class="btn">Apply for 2026–27</a>
+      <a href="#departments" class="btn btn-outline">Explore Departments</a>
+    </div>
+  </div>
+</section>
+
+<section class="quick-section">
+  <div class="container quick-grid">
+    <a href="#administration" class="quick-card"><span>👨‍💼</span>Administration</a>
+    <a href="#departments" class="quick-card"><span>🎓</span>Departments</a>
+    <a href="#programs" class="quick-card"><span>📚</span>Programs</a>
+    <a href="#activities" class="quick-card"><span>🏆</span>Sports & Activities</a>
+    <a href="#admissions" class="quick-card"><span>📝</span>Admissions</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=85" alt="University campus">
+    </div>
+    <div class="about-text">
+      <span class="badge" style="background:#fff7d9;color:#765b00;border-color:#c9a227">ABOUT HNU</span>
+      <h2>A University Designed for Tomorrow</h2>
+      <p>
+        HABEEB NIHMATHULLAH UNIVERSITY provides a student-focused environment
+        where academic learning, practical skills, research, sports and
+        extracurricular activities come together.
+      </p>
+      <p>
+        Our aim is to encourage students to become confident professionals,
+        responsible citizens and innovative thinkers.
+      </p>
+
+      <div class="about-points">
+        <div>✓ Student-Centred Learning</div>
+        <div>✓ Modern Academic Programs</div>
+        <div>✓ Career Development</div>
+        <div>✓ Sports & Cultural Activities</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admin-section" id="administration">
+  <div class="container">
+    <div class="section-head">
+      <h2>University Administration</h2>
+      <p>Leadership team of HABEEB NIHMATHULLAH UNIVERSITY</p>
+    </div>
+
+    <div class="admin-grid">
+
+      <div class="admin-card">
+        <div class="admin-photo">MN</div>
+        <h3>MOHAMED NASARUDEEN</h3>
+        <div class="role">Chairman</div>
+        <p>Provides strategic leadership and guidance for the university.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">R</div>
+        <h3>RANI</h3>
+        <div class="role">Vice Chairman</div>
+        <p>Supports university leadership, development and administration.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">N</div>
+        <h3>NAJIM</h3>
+        <div class="role">Principal</div>
+        <p>Leads academic activities and overall institutional operations.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">T</div>
+        <h3>THASNIM</h3>
+        <div class="role">Vice Principal</div>
+        <p>Supports academic coordination and student development.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">M</div>
+        <h3>MAZIN</h3>
+        <div class="role">Registrar</div>
+        <p>Coordinates academic records, administration and university services.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">A</div>
+        <h3>AFIZA</h3>
+        <div class="role">Administrative Officer</div>
+        <p>Manages administrative support and university office services.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">M</div>
+        <h3>MOHAMED</h3>
+        <div class="role">Dean – Academics</div>
+        <p>Supports academic planning, programs and quality initiatives.</p>
+      </div>
+
+      <div class="admin-card">
+        <div class="admin-photo">AN</div>
+        <h3>AMRUN NISHA</h3>
+        <div class="role">Dean – Student Affairs</div>
+        <p>Supports student welfare, activities and campus engagement.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="departments" id="departments">
+  <div class="container">
+    <div class="section-head">
+      <h2>Academic Departments</h2>
+      <p>Explore our departments, programs and career opportunities.</p>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="deptSearch" placeholder="🔎 Search department..." onkeyup="searchDepartments()">
+    </div>
+
+    <div class="dept-grid" id="deptGrid">
+
+      <div class="dept-card" data-name="Computer Applications" onclick="openDept(0)">
+        <div class="dept-icon">💻</div><h3>Computer Applications</h3><p>HOD: NASKATH</p>
+      </div>
+
+      <div class="dept-card" data-name="Computer Science" onclick="openDept(1)">
+        <div class="dept-icon">🖥️</div><h3>Computer Science</h3><p>HOD: HAFIK</p>
+      </div>
+
+      <div class="dept-card" data-name="Information Technology" onclick="openDept(2)">
+        <div class="dept-icon">🌐</div><h3>Information Technology</h3><p>HOD: AMEEN</p>
+      </div>
+
+      <div class="dept-card" data-name="Commerce" onclick="openDept(3)">
+        <div class="dept-icon">💼</div><h3>Commerce</h3><p>HOD: FATHIYA</p>
+      </div>
+
+      <div class="dept-card" data-name="Business Administration" onclick="openDept(4)">
+        <div class="dept-icon">📊</div><h3>Business Administration</h3><p>HOD: MADEEN</p>
+      </div>
+
+      <div class="dept-card" data-name="Management" onclick="openDept(5)">
+        <div class="dept-icon">📈</div><h3>Management</h3><p>HOD: HAJA</p>
+      </div>
+
+      <div class="dept-card" data-name="Mathematics" onclick="openDept(6)">
+        <div class="dept-icon">➗</div><h3>Mathematics</h3><p>HOD: MARSATH</p>
+      </div>
+
+      <div class="dept-card" data-name="Physics" onclick="openDept(7)">
+        <div class="dept-icon">⚛️</div><h3>Physics</h3><p>HOD: SHEIK</p>
+      </div>
+
+      <div class="dept-card" data-name="Chemistry" onclick="openDept(8)">
+        <div class="dept-icon">🧪</div><h3>Chemistry</h3><p>HOD: AMSAATH</p>
+      </div>
+
+      <div class="dept-card" data-name="English" onclick="openDept(9)">
+        <div class="dept-icon">📖</div><h3>English</h3><p>HOD: YASMIN</p>
+      </div>
+
+      <div class="dept-card" data-name="Civil Engineering" onclick="openDept(10)">
+        <div class="dept-icon">🏗️</div><h3>Civil Engineering</h3><p>HOD: KALIL</p>
+      </div>
+
+      <div class="dept-card" data-name="Mechanical Engineering" onclick="openDept(11)">
+        <div class="dept-icon">⚙️</div><h3>Mechanical Engineering</h3><p>HOD: MOHAMED</p>
+      </div>
+
+      <div class="dept-card" data-name="Electrical & Electronics" onclick="openDept(12)">
+        <div class="dept-icon">⚡</div><h3>Electrical & Electronics</h3><p>HOD: SHEIK</p>
+      </div>
+
+      <div class="dept-card" data-name="Electronics & Communication" onclick="openDept(13)">
+        <div class="dept-icon">📡</div><h3>Electronics & Communication</h3><p>HOD: AMEEN</p>
+      </div>
+
+      <div class="dept-card" data-name="Biotechnology" onclick="openDept(14)">
+        <div class="dept-icon">🧬</div><h3>Biotechnology</h3><p>HOD: AMSAATH</p>
+      </div>
+
+      <div class="dept-card" data-name="Psychology" onclick="openDept(15)">
+        <div class="dept-icon">🧠</div><h3>Psychology</h3><p>HOD: NASRIN</p>
+      </div>
+
+      <div class="dept-card" data-name="Geography" onclick="openDept(16)">
+        <div class="dept-icon">🌍</div><h3>Geography</h3><p>HOD: HARSHA</p>
+      </div>
+
+      <div class="dept-card" data-name="History" onclick="openDept(17)">
+        <div class="dept-icon">🏛️</div><h3>History</h3><p>HOD: MARSATH</p>
+      </div>
+
+      <div class="dept-card" data-name="Law" onclick="openDept(18)">
+        <div class="dept-icon">⚖️</div><h3>Law</h3><p>HOD: MADEEN</p>
+      </div>
+
+      <div class="dept-card" data-name="Visual Communication" onclick="openDept(19)">
+        <div class="dept-icon">🎨</div><h3>Visual Communication</h3><p>HOD: YASMIN</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-head">
+      <h2>Academic Programs</h2>
+      <p>Programs designed for knowledge, skills and career readiness.</p>
+    </div>
+
+    <div class="program-grid">
+      <div class="program-card">
+        <h3>Undergraduate Programs</h3>
+        <p>Build a strong academic foundation with practical learning and industry-oriented skills.</p>
+        <span class="tag">UG PROGRAMS</span>
+      </div>
+      <div class="program-card">
+        <h3>Postgraduate Programs</h3>
+        <p>Advanced programs for specialization, research, professional development and leadership.</p>
+        <span class="tag">PG PROGRAMS</span>
+      </div>
+      <div class="program-card">
+        <h3>Skill Development</h3>
+        <p>Workshops, certifications, communication training, technical events and career preparation.</p>
+        <span class="tag">CAREER READY</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="activities-section" id="activities">
+  <div class="container">
+    <div class="section-head">
+      <h2>Sports & Extra Activities</h2>
+      <p>Developing talent, teamwork, leadership and confidence beyond the classroom.</p>
+    </div>
+
+    <div class="activities-grid">
+
+      <div class="activity-card">
+        <div class="activity-icon">🏏</div>
+        <h3>Cricket</h3>
+        <p>University cricket team, inter-department matches and tournaments.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">⚽</div>
+        <h3>Football</h3>
+        <p>Football training, university team and inter-college competitions.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🏐</div>
+        <h3>Volleyball</h3>
+        <p>Indoor and outdoor volleyball activities with regular tournaments.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🏸</div>
+        <h3>Badminton</h3>
+        <p>Singles and doubles competitions for students.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🏀</div>
+        <h3>Basketball</h3>
+        <p>Basketball training and university-level competitions.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🏓</div>
+        <h3>Table Tennis</h3>
+        <p>Indoor table tennis practice and competitive events.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">♟️</div>
+        <h3>Chess</h3>
+        <p>Chess club, tournaments and strategic thinking activities.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🏃</div>
+        <h3>Athletics</h3>
+        <p>Running, long jump, high jump and other athletic events.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🎭</div>
+        <h3>Cultural Activities</h3>
+        <p>Dance, music, drama and cultural celebrations.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">💻</div>
+        <h3>Technical Events</h3>
+        <p>Hackathons, coding events, workshops and technical competitions.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🎤</div>
+        <h3>Debate & Communication</h3>
+        <p>Debates, public speaking and communication competitions.</p>
+      </div>
+
+      <div class="activity-card">
+        <div class="activity-icon">🏆</div>
+        <h3>Student Clubs</h3>
+        <p>Various student clubs for leadership, creativity and teamwork.</p>
+      </div>
+
+    </div>
+
+    <div class="sports-highlight">
+      <div>
+        <h3>🏆 University Sports</h3>
+        <p>
+          Sports are an important part of student life at HNU. Students can
+          participate in university teams, inter-department competitions and
+          annual sports events while developing teamwork, discipline and
+          leadership skills.
+        </p>
+      </div>
+
+      <div class="sports-list">
+        <div>🏏 Cricket Team</div>
+        <div>⚽ Football Team</div>
+        <div>🏐 Volleyball Team</div>
+        <div>🏸 Badminton Team</div>
+        <div>🏀 Basketball Team</div>
+        <div>🏃 Athletics Team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="admission" id="admissions">
+  <div class="container admission-grid">
+
+    <div class="admission-image">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85"
+        alt="Students at university"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=85';"
+      >
+    </div>
+
+    <div>
+      <h2>Admissions Open 2026–27</h2>
+      <p>
+        Begin your academic journey at HABEEB NIHMATHULLAH UNIVERSITY.
+        Applications are now open for the 2026–27 academic year.
+      </p>
+
+      <ul class="admission-list">
+        <li>Multiple Undergraduate & Postgraduate Programs</li>
+        <li>Modern learning environment</li>
+        <li>Sports and extracurricular activities</li>
+        <li>Career and skill development opportunities</li>
+        <li>Student-focused academic support</li>
+      </ul>
+
+      <div class="form">
+        <h3>Admission Enquiry</h3>
+        <form onsubmit="submitAdmission(event)">
+          <input type="text" id="studentName" placeholder="Student Name" required>
+          <input type="tel" id="studentPhone" placeholder="Phone Number" required>
+          <input type="email" id="studentEmail" placeholder="Email Address" required>
+          <select id="studentProgram" required>
+            <option value="">Select Program</option>
+            <option>Computer Applications</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Commerce</option>
+            <option>Business Administration</option>
+            <option>Management</option>
+            <option>Engineering</option>
+            <option>Science</option>
+            <option>Arts & Humanities</option>
+            <option>Law</option>
+            <option>Visual Communication</option>
+          </select>
+          <button type="submit">Submit Enquiry</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="news" id="news">
+  <div class="container">
+    <div class="section-head">
+      <h2>Latest News & Announcements</h2>
+      <p>Stay updated with university activities and announcements.</p>
+    </div>
+
+    <div class="news-grid">
+
+      <article class="news-card">
+        <img
+          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+          alt="Admissions announcement"
+          onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=900&q=85';"
+        >
+        <div class="news-content">
+          <div class="news-date">2026 ADMISSIONS</div>
+          <h3>Admissions Open for 2026–27</h3>
+          <p>Students can submit admission enquiries for the upcoming academic year.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img
+          src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=85"
+          alt="Student activities"
+        >
+        <div class="news-content">
+          <div class="news-date">CAMPUS LIFE</div>
+          <h3>Sports & Student Activities</h3>
+          <p>University teams and student clubs are preparing for campus events and competitions.</p>
+        </div>
+      </article>
+
+      <article class="news-card">
+        <img
+          src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
+          alt="Academic event"
+        >
+        <div class="news-content">
+          <div class="news-date">ACADEMICS</div>
+          <h3>Academic Development Programs</h3>
+          <p>Workshops and skill-development activities help students prepare for future careers.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact HNU</h2>
+      <p>We are here to help students, parents and visitors.</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div class="contact-item">
+          <span>📍</span>
+          <div>
+            <h4>University Address</h4>
+            <p>HABEEB NIHMATHULLAH UNIVERSITY,<br>Ramanathapuram, Tamil Nadu, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span>📞</span>
+          <div>
+            <h4>Phone</h4>
+            <p>6374320835</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <span>✉️</span>
+          <div>
+            <h4>Email</h4>
+            <p>habeebnihmathullah@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3 style="color:var(--navy);margin-bottom:15px">Quick Message</h3>
+        <form onsubmit="submitContact(event)">
+          <input type="text" placeholder="Your Name" required style="width:100%;padding:12px;margin:6px 0;border:1px solid var(--border);border-radius:6px">
+          <input type="email" placeholder="Your Email" required style="width:100%;padding:12px;margin:6px 0;border:1px solid var(--border);border-radius:6px">
+          <textarea placeholder="Your Message" required rows="5" style="width:100%;padding:12px;margin:6px 0;border:1px solid var(--border);border-radius:6px;resize:vertical"></textarea>
+          <button type="submit" class="btn" style="cursor:pointer">Send Message</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-grid">
+
+    <div>
+      <h3>HABEEB NIHMATHULLAH UNIVERSITY</h3>
+      <p>
+        A modern university website concept focused on academic excellence,
+        student development, sports, innovation and career readiness.
+      </p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#administration">Administration</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#activities">Sports & Activities</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li>📍 Ramanathapuram, Tamil Nadu</li>
+        <li>📞 6374320835</li>
+        <li>✉️ habeebnihmathullah@gmail.com</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container footer-bottom">
+    © 2026 HABEEB NIHMATHULLAH UNIVERSITY (HNU). All Rights Reserved.
+  </div>
+</footer>
+
+<div class="modal" id="deptModal" onclick="closeOutside(event)">
+  <div class="modal-box">
+    <span class="close" onclick="closeDept()">×</span>
+    <h2 id="modalTitle"></h2>
+    <div class="modal-hod" id="modalHod"></div>
+
+    <h3>About the Department</h3>
+    <p id="modalAbout"></p>
+
+    <h3>Courses & Learning</h3>
+    <ul id="modalCourses"></ul>
+
+    <h3>Facilities & Faculty</h3>
+    <p id="modalFacilities"></p>
+
+    <h3>Career Opportunities</h3>
+    <p id="modalCareer"></p>
+
+    <a href="#admissions" class="modal-apply" onclick="closeDept()">Apply Now</a>
+  </div>
+</div>
+
+<script>
+const departments = [
+  {
+    name:"Computer Applications", hod:"NASKATH",
+    about:"The Department of Computer Applications focuses on software, application development, databases, web technologies and practical computing skills.",
+    courses:["Programming Fundamentals","Web Development","Database Management","Software Engineering"],
+    facilities:"Computer laboratories, web development practice, software tools and project-based learning.",
+    career:"Software Developer, Web Developer, Application Support, Database Assistant and IT Executive."
+  },
+  {
+    name:"Computer Science", hod:"HAFIK",
+    about:"The department provides strong foundations in computing, algorithms, programming, operating systems and modern technologies.",
+    courses:["Data Structures","Operating Systems","Computer Networks","Artificial Intelligence"],
+    facilities:"Programming labs, networking facilities, project work and technical workshops.",
+    career:"Software Engineer, System Analyst, Developer, Technical Support and AI-related roles."
+  },
+  {
+    name:"Information Technology", hod:"AMEEN",
+    about:"The IT department prepares students for modern information systems, cloud technologies, networking and digital services.",
+    courses:["Cloud Computing","Networking","Cyber Security","Information Systems"],
+    facilities:"Networking labs, cloud learning environment and hands-on technical activities.",
+    career:"Cloud Associate, Network Administrator, IT Support, Security Analyst and System Administrator."
+  },
+  {
+    name:"Commerce", hod:"FATHIYA",
+    about:"Commerce develops knowledge in accounting, finance, taxation, business operations and financial decision-making.",
+    courses:["Financial Accounting","Cost Accounting","Business Law","Taxation"],
+    facilities:"Commerce labs, accounting software practice and seminars.",
+    career:"Accountant, Banking Executive, Finance Assistant, Tax Assistant and Business Executive."
+  },
+  {
+    name:"Business Administration", hod:"MADEEN",
+    about:"The program develops business knowledge, communication skills, leadership ability and entrepreneurial thinking.",
+    courses:["Marketing","Human Resource Management","Finance","Business Strategy"],
+    facilities:"Business case studies, seminars, presentations and management activities.",
+    career:"Business Executive, HR Executive, Marketing Executive, Entrepreneur and Management Trainee."
+  },
+  {
+    name:"Management", hod:"HAJA",
+    about:"The Management department focuses on planning, leadership, organizational behaviour and business decision-making.",
+    courses:["Principles of Management","Operations Management","HR Management","Strategic Management"],
+    facilities:"Management workshops, presentations and practical case studies.",
+    career:"Management Trainee, Operations Executive, HR Executive and Administrative Manager."
+  },
+  {
+    name:"Mathematics", hod:"MARSATH",
+    about:"The Mathematics department develops analytical reasoning, problem-solving and quantitative skills.",
+    courses:["Algebra","Calculus","Statistics","Discrete Mathematics"],
+    facilities:"Mathematics learning resources, problem-solving sessions and academic support.",
+    career:"Teacher, Data Analyst, Research Assistant, Banking Professional and Quantitative roles."
+  },
+  {
+    name:"Physics", hod:"SHEIK",
+    about:"Physics introduces students to scientific principles, experimental methods and analytical thinking.",
+    courses:["Mechanics","Optics","Electronics","Modern Physics"],
+    facilities:"Physics laboratories, experiments and practical demonstrations.",
+    career:"Research Assistant, Lab Technician, Teacher and Technical Professional."
+  },
+  {
+    name:"Chemistry", hod:"AMSAATH",
+    about:"Chemistry combines theoretical knowledge with laboratory practice in chemical sciences.",
+    courses:["Organic Chemistry","Inorganic Chemistry","Physical Chemistry","Analytical Chemistry"],
+    facilities:"Chemistry laboratories, practical experiments and scientific workshops.",
+    career:"Lab Technician, Quality Analyst, Research Assistant and Industrial Chemistry roles."
+  },
+  {
+    name:"English", hod:"YASMIN",
+    about:"The English department develops language proficiency, literature knowledge, communication and professional writing.",
+    courses:["English Literature","Communication Skills","Professional Writing","Language Studies"],
+    facilities:"Language activities, presentations, communication clubs and reading resources.",
+    career:"Teacher, Content Writer, Editor, Communication Executive and Media roles."
+  },
+  {
+    name:"Civil Engineering", hod:"KALIL",
+    about:"Civil Engineering focuses on construction, infrastructure, structural concepts and sustainable development.",
+    courses:["Structural Engineering","Construction Technology","Surveying","Environmental Engineering"],
+    facilities:"Civil engineering laboratories, surveying equipment and practical training.",
+    career:"Site Engineer, Civil Engineer, Quantity Surveyor and Construction Professional."
+  },
+  {
+    name:"Mechanical Engineering", hod:"MOHAMED",
+    about:"Mechanical Engineering covers machines, manufacturing, thermal systems and mechanical design.",
+    courses:["Thermodynamics","Machine Design","Manufacturing","Engineering Mechanics"],
+    facilities:"Mechanical laboratories, workshops and practical machine-based learning.",
+    career:"Mechanical Engineer, Production Engineer, Design Engineer and Maintenance Engineer."
+  },
+  {
+    name:"Electrical & Electronics", hod:"SHEIK",
+    about:"The department develops knowledge in electrical systems, circuits, machines and electronic technologies.",
+    courses:["Electrical Machines","Power Systems","Circuit Theory","Control Systems"],
+    facilities:"Electrical laboratories, circuit testing and practical training.",
+    career:"Electrical Engineer, Maintenance Engineer, Technician and Power-sector roles."
+  },
+  {
+    name:"Electronics & Communication", hod:"AMEEN",
+    about:"The department focuses on electronics, communication systems, embedded technologies and digital systems.",
+    courses:["Digital Electronics","Communication Systems","Embedded Systems","Microprocessors"],
+    facilities:"Electronics laboratories, communication equipment and project facilities.",
+    career:"Electronics Engineer, Embedded Developer, Communication Engineer and Technical Support."
+  },
+  {
+    name:"Biotechnology", hod:"AMSAATH",
+    about:"Biotechnology combines biology and technology for applications in healthcare, agriculture and industry.",
+    courses:["Cell Biology","Genetics","Microbiology","Bioprocess Technology"],
+    facilities:"Biology and biotechnology laboratories and practical experiments.",
+    career:"Lab Technician, Research Assistant, Biotech Executive and Quality Control roles."
+  },
+  {
+    name:"Psychology", hod:"NASRIN",
+    about:"Psychology explores human behaviour, cognition, emotions and interpersonal development.",
+    courses:["General Psychology","Social Psychology","Developmental Psychology","Counselling Basics"],
+    facilities:"Psychology resources, seminars, discussions and practical learning activities.",
+    career:"HR Executive, Counselling Support, Research Assistant and Behavioural Services roles."
+  },
+  {
+    name:"Geography", hod:"HARSHA",
+    about:"Geography studies physical environments, human communities, resources and spatial development.",
+    courses:["Physical Geography","Human Geography","Environmental Studies","GIS Basics"],
+    facilities:"Maps, geographical resources, field activities and GIS learning.",
+    career:"GIS Assistant, Research Assistant, Teacher, Survey Assistant and Planning roles."
+  },
+  {
+    name:"History", hod:"MARSATH",
+    about:"History develops understanding of civilizations, cultures, political developments and heritage.",
+    courses:["Indian History","World History","Heritage Studies","Modern History"],
+    facilities:"Library resources, seminars, heritage discussions and academic projects.",
+    career:"Teacher, Research Assistant, Museum Assistant, Content Researcher and Civil Services preparation."
+  },
+  {
+    name:"Law", hod:"MADEEN",
+    about:"The Law department introduces students to legal principles, rights, responsibilities and the justice system.",
+    courses:["Constitutional Law","Criminal Law","Civil Law","Legal Studies"],
+    facilities:"Legal resources, case-study discussions, seminars and mock activities.",
+    career:"Legal Assistant, Compliance Executive, Legal Researcher and related professional pathways."
+  },
+  {
+    name:"Visual Communication", hod:"YASMIN",
+    about:"Visual Communication develops creativity and professional skills in media, design, photography and digital communication.",
+    courses:["Graphic Design","Photography","Video Production","Digital Media"],
+    facilities:"Creative studios, media equipment, design practice and project work.",
+    career:"Graphic Designer, Video Editor, Photographer, Content Creator and Media Professional."
+  }
+];
+
+function openDept(index){
+  const d=departments[index];
+  document.getElementById("modalTitle").textContent=d.name;
+  document.getElementById("modalHod").textContent="Head of Department: "+d.hod;
+  document.getElementById("modalAbout").textContent=d.about;
+  document.getElementById("modalFacilities").textContent=d.facilities;
+  document.getElementById("modalCareer").textContent=d.career;
+
+  const list=document.getElementById("modalCourses");
+  list.innerHTML="";
+  d.courses.forEach(course=>{
+    const li=document.createElement("li");
+    li.textContent=course;
+    list.appendChild(li);
+  });
+
+  document.getElementById("deptModal").style.display="block";
+  document.body.style.overflow="hidden";
+}
+
+function closeDept(){
+  document.getElementById("deptModal").style.display="none";
+  document.body.style.overflow="auto";
+}
+
+function closeOutside(e){
+  if(e.target.id==="deptModal") closeDept();
+}
+
+function searchDepartments(){
+  const value=document.getElementById("deptSearch").value.toLowerCase();
+  document.querySelectorAll(".dept-card").forEach(card=>{
+    const name=card.dataset.name.toLowerCase();
+    card.style.display=name.includes(value)?"block":"none";
+  });
+}
+
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+function closeMenu(){
+  document.getElementById("navLinks").classList.remove("show");
+}
+
+function submitAdmission(e){
+  e.preventDefault();
+  const name=document.getElementById("studentName").value;
+  const program=document.getElementById("studentProgram").value;
+  alert("Thank you, "+name+"! Your admission enquiry for "+program+" has been submitted.");
+  e.target.reset();
+}
+
+function submitContact(e){
+  e.preventDefault();
+  alert("Thank you! Your message has been received.");
+  e.target.reset();
+}
+
+window.addEventListener("keydown",function(e){
+  if(e.key==="Escape") closeDept();
+});
+</script>
+
+</body>
+</html>
