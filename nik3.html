@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HABEEB NIHMATHULLAH UNIVERSITY | HNU - Ramanathapuram</title>
+<meta name="description" content="Habeeb Nihmathullah University (HNU), Ramanathapuram, Tamil Nadu. Excellence in Education, Research, and Innovation. Admissions Open 2026-27.">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#071a35;
+  --navy2:#0d2b52;
+  --gold:#c9a227;
+  --gold2:#e9d27a;
+  --gold-bg:#fff9e6;
+  --white:#fff;
+  --light:#f5f7fa;
+  --text:#26364a;
+  --muted:#667085;
+  --border:#e3e7ed;
+  --success:#10b981;
+  --success-bg:#ecfdf5;
+  --card-shadow:0 6px 20px rgba(7,26,53,.06);
+  --hover-shadow:0 14px 30px rgba(7,26,53,.12);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',system-ui,-apple-system,BlinkMacSystemFont,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1200px,92%);margin:auto}
+
+/* TOP BAR */
+.topbar{background:var(--navy);color:#fff;padding:8px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,.1)}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.topbar-links{display:flex;gap:15px;align-items:center}
+.topbar-links a:hover{color:var(--gold2)}
+
+/* URGENT NOTICE TICKER */
+.ticker-bar{background:#041021;color:#fff;font-size:13px;display:flex;align-items:center;border-bottom:2px solid var(--gold);overflow:hidden;height:36px}
+.ticker-badge{background:var(--gold);color:var(--navy);font-weight:800;padding:0 16px;height:100%;display:flex;align-items:center;gap:6px;text-transform:uppercase;font-size:11px;letter-spacing:1px;white-space:nowrap;z-index:2}
+.ticker-content{display:flex;white-space:nowrap;animation:ticker 30s linear infinite;padding-left:20px}
+.ticker-item{margin-right:45px;display:flex;align-items:center;gap:8px}
+.ticker-item::after{content:"•";margin-left:45px;color:var(--gold)}
+@keyframes ticker{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+.ticker-bar:hover .ticker-content{animation-play-state:paused}
+
+/* HEADER */
+header{background:#fff;position:sticky;top:0;z-index:1000;box-shadow:0 3px 20px rgba(0,0,0,.08)}
+.nav{height:84px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{
+  width:54px;height:54px;border-radius:50%;background:var(--navy);
+  color:var(--gold2);display:grid;place-items:center;font-weight:800;
+  border:3px solid var(--gold);font-size:18px;letter-spacing:1px;
+  box-shadow:0 4px 10px rgba(7,26,53,.2)
+}
+.brand h1{font-size:19px;font-weight:800;color:var(--navy);letter-spacing:.3px}
+.brand p{font-size:10px;letter-spacing:2px;color:#7a8491;font-weight:700}
+nav{display:flex;gap:20px;align-items:center}
+nav a{font-size:14px;font-weight:700;color:#243246;transition:.2s;padding:6px 0;position:relative}
+nav a:hover{color:var(--gold)}
+nav a:hover::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold)}
+.btn-nav{
+  background:linear-gradient(135deg,var(--gold),#dfb638);
+  color:var(--navy)!important;padding:9px 18px!important;border-radius:6px;
+  font-weight:800!important;font-size:13px!important;box-shadow:0 3px 10px rgba(201,162,39,.3)
+}
+.btn-nav:hover{background:var(--gold2)!important;transform:translateY(-1px)}
+.btn-nav::after{display:none!important}
+.menu{display:none;font-size:28px;cursor:pointer;color:var(--navy)}
+
+/* HERO */
+.hero{
+  min-height:580px;color:#fff;display:flex;align-items:center;
+  background:linear-gradient(90deg,rgba(3,15,34,.94) 0%,rgba(3,15,34,.70) 100%),
+  url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85")
+  center/cover no-repeat;
+  position:relative;
+}
+.hero-content{max-width:760px;padding:40px 0}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,.18);
+  border:1px solid var(--gold);color:var(--gold2);padding:6px 14px;border-radius:30px;
+  font-size:13px;font-weight:700;margin-bottom:18px;text-transform:uppercase;letter-spacing:1px
+}
+.hero h2{font-size:52px;line-height:1.15;margin-bottom:18px;font-weight:800}
+.hero p{font-size:18px;color:#e7edf6;margin-bottom:28px;line-height:1.6}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:13px 24px;border-radius:6px;font-weight:700;
+  background:var(--gold);color:#071a35;border:0;cursor:pointer;transition:.25s;font-size:15px;
+}
+.btn:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 8px 20px rgba(201,162,39,.35)}
+.btn.outline{background:transparent;color:#fff;border:2px solid #fff}
+.btn.outline:hover{background:#fff;color:var(--navy);box-shadow:0 8px 20px rgba(255,255,255,.25)}
+.btn-sm{padding:8px 16px;font-size:13px}
+
+/* STATS STRIP */
+.stats-strip{background:var(--navy2);color:#fff;padding:26px 0;border-bottom:3px solid var(--gold)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.stat-item h3{font-size:38px;color:var(--gold2);font-weight:800;margin-bottom:4px}
+.stat-item p{font-size:14px;color:#cbd4e0;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+
+/* SECTIONS */
+section{padding:75px 0}
+.section-head{text-align:center;margin-bottom:42px}
+.section-tag{color:var(--gold);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+.section-head h2{font-size:36px;color:var(--navy);margin-bottom:10px;font-weight:800}
+.section-head p{color:var(--muted);font-size:16px;max-width:650px;margin:auto}
+
+/* QUICK ACCESS */
+.quick{background:var(--light);padding:26px 0}
+.quick-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:15px}
+.quick-card{
+  background:#fff;border:1px solid var(--border);padding:20px 14px;border-radius:10px;
+  text-align:center;font-weight:700;color:var(--navy);transition:.25s;box-shadow:var(--card-shadow)
+}
+.quick-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:var(--hover-shadow);color:var(--gold)}
+.quick-card span{display:block;font-size:28px;margin-bottom:8px}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:420px;object-fit:cover;border-radius:14px;box-shadow:var(--hover-shadow)}
+.about-badge{
+  position:absolute;bottom:-18px;right:25px;background:var(--navy);color:#fff;
+  padding:15px 22px;border-radius:10px;border-left:5px solid var(--gold);box-shadow:0 8px 25px rgba(0,0,0,.2)
+}
+.about-badge strong{display:block;font-size:22px;color:var(--gold2)}
+.about-text h3{font-size:30px;color:var(--navy);margin-bottom:16px;font-weight:800}
+.about-text p{color:var(--muted);margin-bottom:16px;line-height:1.7}
+.about-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.pillar{background:var(--light);border:1px solid var(--border);padding:14px;border-radius:8px;text-align:center}
+.pillar span{font-size:22px;display:block;margin-bottom:4px}
+.pillar h4{font-size:14px;color:var(--navy)}
+
+/* UNIVERSITY ADMINISTRATION */
+.admin-section{background:var(--light)}
+.admin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.admin-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;padding:26px 18px;
+  text-align:center;box-shadow:var(--card-shadow);transition:.25s;
+}
+.admin-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--hover-shadow)}
+.admin-photo{
+  width:95px;height:95px;border-radius:50%;margin:0 auto 16px;
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  border:4px solid var(--gold);display:grid;place-items:center;
+  color:var(--gold2);font-size:28px;font-weight:800;box-shadow:0 4px 15px rgba(7,26,53,.15)
+}
+.admin-card h3{color:var(--navy);font-size:17px;margin-bottom:4px;font-weight:800}
+.admin-card .role{color:var(--gold);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.admin-card p{color:var(--muted);font-size:13px;line-height:1.5}
+
+/* DEPARTMENTS */
+.dept-section{background:#fff}
+.search-box{max-width:560px;margin:0 auto 35px;position:relative}
+.search-box input{
+  width:100%;padding:15px 22px 15px 48px;border:2px solid var(--border);border-radius:30px;
+  font-size:15px;outline:none;transition:.25s;box-shadow:0 4px 12px rgba(0,0,0,.03)
+}
+.search-box input:focus{border-color:var(--navy);box-shadow:0 6px 20px rgba(7,26,53,.1)}
+.search-icon{position:absolute;left:20px;top:50%;transform:translateY(-50%);font-size:17px;color:#8a8f98}
+.dept-filter-tags{display:flex;justify-content:center;gap:8px;margin-bottom:28px;flex-wrap:wrap}
+.dept-filter-btn{
+  background:var(--light);border:1px solid var(--border);padding:6px 16px;border-radius:20px;
+  font-size:13px;font-weight:700;color:var(--muted);cursor:pointer;transition:.2s
+}
+.dept-filter-btn.active,.dept-filter-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+.dept-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.dept-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 20px;
+  cursor:pointer;transition:.25s;box-shadow:var(--card-shadow);position:relative;overflow:hidden
+}
+.dept-card::before{
+  content:'';position:absolute;top:0;left:0;width:100%;height:4px;background:var(--navy);
+  opacity:0;transition:.25s
+}
+.dept-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--hover-shadow)}
+.dept-card:hover::before{opacity:1;background:var(--gold)}
+.dept-icon{
+  width:56px;height:56px;border-radius:50%;display:grid;place-items:center;
+  background:#fff7d9;border:1px solid #ead28a;font-size:26px;margin-bottom:14px
+}
+.dept-card h3{font-size:17px;color:var(--navy);margin-bottom:6px;font-weight:800}
+.dept-card .hod-badge{display:inline-block;font-size:12px;color:var(--gold);font-weight:800;background:var(--gold-bg);padding:3px 9px;border-radius:4px;margin-bottom:8px}
+.dept-card p{font-size:13px;color:var(--muted);line-height:1.5}
+.dept-card .click-hint{font-size:11px;color:var(--navy);font-weight:700;margin-top:10px;display:flex;align-items:center;gap:4px}
+
+/* PROGRAMS */
+.programs-section{background:var(--light)}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.program{
+  padding:28px 24px;border:1px solid var(--border);border-radius:12px;background:#fff;
+  box-shadow:var(--card-shadow);transition:.25s;position:relative
+}
+.program:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:var(--hover-shadow)}
+.prog-badge{display:inline-block;font-size:11px;font-weight:800;text-transform:uppercase;color:#fff;background:var(--navy);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+.program h3{color:var(--navy);margin-bottom:8px;font-size:20px;font-weight:800}
+.program p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:14px}
+.prog-meta{display:flex;justify-content:space-between;padding-top:12px;border-top:1px dashed var(--border);font-size:12px;font-weight:700;color:#556}
+
+/* PLACEMENTS & RECRUITERS */
+.placements{background:#fff}
+.placement-stats-box{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;
+  border-radius:14px;padding:36px;margin-bottom:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:25px;text-align:center;
+  border-bottom:4px solid var(--gold)
+}
+.placement-stat h4{font-size:36px;color:var(--gold2);font-weight:800}
+.placement-stat p{font-size:13px;color:#d5dfec;text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.recruiters-marquee{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.recruiter-chip{
+  background:var(--light);border:1px solid var(--border);border-radius:8px;padding:14px 22px;
+  font-weight:800;font-size:15px;color:var(--navy);display:flex;align-items:center;gap:8px;
+  box-shadow:0 3px 10px rgba(0,0,0,.03);transition:.2s
+}
+.recruiter-chip:hover{border-color:var(--gold);transform:scale(1.04);background:#fff}
+
+/* FEE & ELIGIBILITY CALCULATOR */
+.calc-section{background:var(--light)}
+.calc-card{
+  background:#fff;border-radius:14px;border:1px solid var(--border);padding:35px;
+  box-shadow:var(--card-shadow);max-width:900px;margin:auto
+}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.calc-form select{
+  width:100%;padding:14px;border:2px solid var(--border);border-radius:8px;
+  font-size:15px;font-weight:600;color:var(--navy);outline:none;margin-bottom:14px
+}
+.calc-result{background:var(--light);border:2px dashed #cfd8e3;padding:24px;border-radius:10px}
+.calc-result h4{font-size:18px;color:var(--navy);margin-bottom:12px;font-weight:800}
+.calc-row{display:flex;justify-content:space-between;margin-bottom:8px;font-size:14px}
+.calc-row.highlight{font-weight:800;font-size:16px;color:var(--navy);border-top:1px solid var(--border);padding-top:10px;margin-top:10px}
+
+/* CAMPUS FACILITIES */
+.facilities-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.facility-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;
+  box-shadow:var(--card-shadow);transition:.25s
+}
+.facility-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:var(--hover-shadow)}
+.facility-card img{width:100%;height:200px;object-fit:cover;display:block}
+.facility-body{padding:22px}
+.facility-body h3{color:var(--navy);font-size:18px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.facility-body p{color:var(--muted);font-size:13px;line-height:1.6}
+
+/* STUDENT LIFE & CLUBS */
+.clubs-section{background:var(--light)}
+.clubs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.club-card{
+  background:#fff;border:1px solid var(--border);padding:24px 20px;border-radius:12px;
+  text-align:center;box-shadow:var(--card-shadow);transition:.25s
+}
+.club-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:var(--hover-shadow)}
+.club-icon{font-size:38px;margin-bottom:12px;display:block}
+.club-card h3{font-size:17px;color:var(--navy);margin-bottom:6px;font-weight:800}
+.club-card p{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* ADMISSION */
+.admission{
+  color:#fff;
+  background:linear-gradient(90deg,rgba(3,15,34,.96) 0%,rgba(3,15,34,.82) 100%),
+  url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=85")
+  center/cover;
+}
+.admission-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.admission h2{font-size:42px;line-height:1.2;margin-bottom:16px;font-weight:800}
+.admission p{color:#e7edf6;margin-bottom:20px;font-size:16px}
+.admission-perks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:25px}
+.perk-item{display:flex;align-items:center;gap:10px;font-size:14px;color:#d8e2f0;font-weight:600}
+.admission-photo{border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.2);box-shadow:0 10px 30px rgba(0,0,0,.3)}
+.admission-photo img{width:100%;height:260px;object-fit:cover;display:block}
+
+.form-box{background:#fff;color:var(--text);padding:32px;border-radius:14px;box-shadow:0 10px 35px rgba(0,0,0,.25)}
+.form-box h3{color:var(--navy);margin-bottom:6px;font-size:22px;font-weight:800}
+.form-box .subtitle{color:var(--muted);font-size:13px;margin-bottom:18px}
+.form-box input,.form-box select,.form-box textarea{
+  width:100%;padding:13px;margin-bottom:12px;border:1px solid var(--border);border-radius:6px;font:inherit;font-size:14px;outline:none
+}
+.form-box input:focus,.form-box select:focus,.form-box textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(7,26,53,.1)}
+.form-box textarea{height:90px;resize:none}
+
+/* NEWS */
+.news{background:var(--light)}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.news-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--border);box-shadow:var(--card-shadow);transition:.25s}
+.news-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:var(--hover-shadow)}
+.news-card img{width:100%;height:210px;object-fit:cover;display:block}
+.news-body{padding:22px}
+.news-date{font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.news-body h3{color:var(--navy);margin-bottom:8px;font-size:18px;font-weight:800}
+.news-body p{font-size:14px;color:var(--muted);line-height:1.5}
+
+/* TESTIMONIALS */
+.testimonials{background:#fff}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.test-card{
+  background:var(--light);border:1px solid var(--border);border-radius:12px;padding:28px 22px;
+  box-shadow:var(--card-shadow);position:relative;transition:.25s
+}
+.test-card:hover{transform:translateY(-4px);border-color:var(--gold);background:#fff}
+.test-quote{font-size:14px;color:var(--text);line-height:1.7;margin-bottom:18px;font-style:italic}
+.test-author{display:flex;align-items:center;gap:12px}
+.test-avatar{
+  width:46px;height:46px;border-radius:50%;background:var(--navy);color:var(--gold2);
+  display:grid;place-items:center;font-weight:800;font-size:15px;border:2px solid var(--gold)
+}
+.test-info h4{font-size:15px;color:var(--navy);font-weight:800}
+.test-info p{font-size:12px;color:var(--muted)}
+
+/* FAQ ACCORDION */
+.faq-section{background:var(--light)}
+.faq-wrap{max-width:820px;margin:auto}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:8px;margin-bottom:12px;overflow:hidden;transition:.2s}
+.faq-item.active{border-color:var(--gold);box-shadow:var(--card-shadow)}
+.faq-question{
+  padding:18px 22px;font-weight:700;color:var(--navy);cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  font-size:16px;user-select:none
+}
+.faq-question:hover{color:var(--gold)}
+.faq-icon{font-size:20px;transition:.3s;color:var(--gold)}
+.faq-item.active .faq-icon{transform:rotate(45deg)}
+.faq-answer{padding:0 22px 18px;color:var(--muted);font-size:14px;line-height:1.7;display:none}
+.faq-item.active .faq-answer{display:block}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.contact-box{padding:32px;border:1px solid var(--border);border-radius:12px;background:#fff;box-shadow:var(--card-shadow)}
+.contact-box h3{color:var(--navy);margin-bottom:16px;font-size:20px;font-weight:800;display:flex;align-items:center;gap:8px}
+.contact-box p{margin:10px 0;color:var(--muted);font-size:14px;line-height:1.6}
+.contact-routes{background:var(--light);padding:14px;border-radius:8px;margin-top:14px;border-left:4px solid var(--gold)}
+.contact-routes strong{color:var(--navy);font-size:13px;display:block;margin-bottom:4px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#fff;padding:45px 0 20px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+footer h3{color:var(--gold2);margin-bottom:16px;font-size:17px;font-weight:800}
+footer p,footer a{color:#cbd4e0;font-size:14px;line-height:1.7}
+footer a{display:block;margin:7px 0;transition:.2s}
+footer a:hover{color:var(--gold2);padding-left:4px}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.15);margin-top:35px;padding-top:20px;color:#aeb9c7;font-size:13px}
+
+/* FLOATING QUICK ACTIONS */
+.floating-actions{position:fixed;bottom:25px;right:25px;display:flex;flex-direction:column;gap:10px;z-index:999}
+.float-btn{
+  width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:22px;
+  box-shadow:0 5px 18px rgba(0,0,0,.25);cursor:pointer;transition:.25s;color:#fff
+}
+.float-whatsapp{background:#25D366}
+.float-whatsapp:hover{transform:scale(1.1)}
+.float-call{background:var(--gold);color:var(--navy)}
+.float-call:hover{transform:scale(1.1)}
+.float-top{background:var(--navy);display:none}
+.float-top:hover{background:var(--navy2);transform:scale(1.1)}
+
+/* MODALS */
+.modal{display:none;position:fixed;inset:0;background:rgba(3,15,34,.78);z-index:2000;overflow:auto;padding:35px 15px}
+.modal-box{background:#fff;width:min(850px,100%);margin:auto;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.modal-head{background:var(--navy);color:#fff;padding:25px 30px;display:flex;align-items:center;gap:16px;position:relative}
+.modal-head .icon{font-size:42px}
+.modal-head h2{font-size:26px;font-weight:800}
+.close{position:absolute;right:22px;top:18px;font-size:32px;cursor:pointer;color:#cbd4e0;transition:.2s}
+.close:hover{color:var(--gold)}
+.modal-body{padding:30px}
+.detail-box{background:var(--light);padding:20px;border-radius:10px;margin-bottom:18px;border:1px solid var(--border)}
+.detail-box h4{color:var(--navy);margin-bottom:8px;font-weight:800}
+.detail-box ul{padding-left:20px;color:var(--muted);font-size:14px;line-height:1.7}
+.detail-box p{color:var(--muted);font-size:14px;line-height:1.6}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.modal-actions{margin-top:25px;display:flex;gap:12px}
+
+/* RECEIPT MODAL */
+.receipt-box{text-align:center;padding:10px 0}
+.receipt-icon{font-size:55px;color:var(--success);margin-bottom:10px}
+.receipt-card{background:var(--light);border:2px dashed var(--border);border-radius:12px;padding:20px;margin:20px 0;text-align:left}
+.receipt-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #e3e7ed;font-size:14px}
+.receipt-id{background:var(--navy);color:var(--gold2);padding:4px 12px;border-radius:4px;font-weight:800;font-family:monospace}
+
+/* PROSPECTUS MODAL */
+.prospectus-cover{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:30px;text-align:center;border-radius:10px;margin-bottom:20px}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .dept-grid{grid-template-columns:repeat(3,1fr)}
+  .admin-grid{grid-template-columns:repeat(2,1fr)}
+  .quick-grid{grid-template-columns:repeat(3,1fr)}
+  .facilities-grid{grid-template-columns:repeat(2,1fr)}
+  .clubs-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:850px){
+  nav{
+    display:none;position:absolute;left:0;right:0;top:84px;background:#fff;
+    padding:24px;flex-direction:column;box-shadow:0 12px 25px rgba(0,0,0,.15);border-top:1px solid var(--border)
+  }
+  nav.show{display:flex}
+  .menu{display:block}
+  .hero h2{font-size:38px}
+  .hero p{font-size:16px}
+  .about-grid,.admission-grid,.contact-grid,.calc-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:15px}
+  .placement-stats-box{grid-template-columns:repeat(2,1fr);gap:15px}
+  .program-grid,.news-grid,.test-grid{grid-template-columns:1fr}
+  .detail-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .dept-grid{grid-template-columns:1fr}
+  .admin-grid{grid-template-columns:1fr}
+  .quick-grid{grid-template-columns:1fr}
+  .facilities-grid{grid-template-columns:1fr}
+  .clubs-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr}
+  .placement-stats-box{grid-template-columns:1fr}
+  .brand h1{font-size:15px}
+  .brand p{font-size:8px}
+  .hero{min-height:480px}
+  .hero h2{font-size:32px}
+  .topbar .container{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <span>📍 Ramanathapuram, Tamil Nadu, India</span>
+    <div class="topbar-links">
+      <span>📞 6374320835</span>
+      <span>✉ habeebnihmathullah@gmail.com</span>
+      <a href="javascript:void(0)" onclick="openProspectusModal()" style="color:var(--gold2);font-weight:700">📥 Prospectus 2026-27</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE NOTICE TICKER -->
+<div class="ticker-bar">
+  <div class="ticker-badge">⚡ Updates</div>
+  <div class="ticker-content">
+    <div class="ticker-item">🎓 Admissions Open for Academic Year 2026–27 (UG & PG Programs)</div>
+    <div class="ticker-item">🏆 National Level Technical Hackathon 2026 Registration Live</div>
+    <div class="ticker-item">🌟 Merit Scholarships up to 100% tuition fee waiver for eligible students</div>
+    <div class="ticker-item">📅 Semester Examination Timetable Published on Student Portal</div>
+    <div class="ticker-item">💼 Placement Drive: Top Recruiters Zoho, TCS, Infosys visiting this month</div>
+    <div class="ticker-item">🎓 Admissions Open for Academic Year 2026–27 (UG & PG Programs)</div>
+    <div class="ticker-item">🏆 National Level Technical Hackathon 2026 Registration Live</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+<div class="container nav">
+  <a href="#home" class="brand">
+    <div class="logo">HNU</div>
+    <div>
+      <h1>HABEEB NIHMATHULLAH UNIVERSITY</h1>
+      <p>KNOWLEDGE • CHARACTER • EXCELLENCE</p>
+    </div>
+  </a>
+
+  <div class="menu" onclick="toggleMenu()">☰</div>
+
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#administration">Administration</a>
+    <a href="#departments">Departments</a>
+    <a href="#programs">Programs</a>
+    <a href="#placements">Placements</a>
+    <a href="#facilities">Campus Life</a>
+    <a href="#calculator">Fee Calculator</a>
+    <a href="#admissions" class="btn-nav">Apply Online</a>
+  </nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div class="container hero-content">
+  <div class="hero-tag">🌟 Admissions Open 2026–27</div>
+  <h2>Empowering Minds, Shaping Tomorrow at HNU</h2>
+  <p>
+    Welcome to HABEEB NIHMATHULLAH UNIVERSITY, Ramanathapuram. Offering 20+ career-focused departments, state-of-the-art research laboratories, distinguished faculty, and 100% placement assistance.
+  </p>
+  <div class="hero-btns">
+    <a href="#admissions" class="btn">Apply For Admission</a>
+    <a href="#departments" class="btn outline">Explore 20 Departments</a>
+    <button onclick="openProspectusModal()" class="btn" style="background:#fff;color:var(--navy)">Download Prospectus</button>
+  </div>
+</div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="container stats-grid">
+    <div class="stat-item">
+      <h3>20+</h3>
+      <p>Academic Departments</p>
+    </div>
+    <div class="stat-item">
+      <h3>100%</h3>
+      <p>Placement Support</p>
+    </div>
+    <div class="stat-item">
+      <h3>50+</h3>
+      <p>Modern Labs & Facilities</p>
+    </div>
+    <div class="stat-item">
+      <h3>₹24 LPA</h3>
+      <p>Highest Salary Package</p>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK ACCESS -->
+<div class="quick">
+<div class="container quick-grid">
+  <a href="#admissions" class="quick-card"><span>🎓</span>Admissions 2026–27</a>
+  <a href="#programs" class="quick-card"><span>📚</span>Academic Programs</a>
+  <a href="#calculator" class="quick-card"><span>🧮</span>Fee & Eligibility</a>
+  <a href="#departments" class="quick-card"><span>🏛️</span>20 Departments</a>
+  <a href="#contact" class="quick-card"><span>📞</span>Contact Campus</a>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">About Our Institution</div>
+    <h2>About Habeeb Nihmathullah University</h2>
+    <p>A premier center of higher education in Ramanathapuram, Tamil Nadu, dedicated to academic distinction, cutting-edge research, and holistic student development.</p>
+  </div>
+
+  <div class="about-grid">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1000&q=85"
+           alt="HNU Campus"
+           onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1000&q=85';">
+      <div class="about-badge">
+        <strong>NAAC Grade 'A'</strong>
+        <span>Excellence in Higher Education</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <h3>Learning Beyond Boundaries</h3>
+      <p>HABEEB NIHMATHULLAH UNIVERSITY is committed to providing world-class learning infrastructure, industry-collaborated curriculum, and moral values that empower students to become visionary leaders.</p>
+      <p>From advanced Artificial Intelligence and Engineering disciplines to Arts, Commerce, Law, and Sciences, HNU offers a dynamic, student-centric academic environment.</p>
+
+      <div class="about-pillars">
+        <div class="pillar">
+          <span>🎯</span>
+          <h4>Knowledge</h4>
+        </div>
+        <div class="pillar">
+          <span>🤝</span>
+          <h4>Character</h4>
+        </div>
+        <div class="pillar">
+          <span>⭐</span>
+          <h4>Excellence</h4>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:20px">
+        <a href="#departments" class="btn">Explore All Departments</a>
+        <a href="#contact" class="btn outline" style="color:var(--navy);border-color:var(--navy)">Campus Visit</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- UNIVERSITY ADMINISTRATION -->
+<section class="admin-section" id="administration">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Leadership Team</div>
+    <h2>University Administration</h2>
+    <p>Visionary leadership steering HABEEB NIHMATHULLAH UNIVERSITY towards global excellence.</p>
+  </div>
+
+  <div class="admin-grid">
+    <div class="admin-card">
+      <div class="admin-photo">MN</div>
+      <h3>MOHAMED NASARUDEEN</h3>
+      <div class="role">Chairman</div>
+      <p>Provides strategic leadership, vision, and institutional guidance for university development.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">R</div>
+      <h3>RANI</h3>
+      <div class="role">Vice Chairman</div>
+      <p>Supports institutional strategy, campus infrastructure development, and administration.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">N</div>
+      <h3>NAJIM</h3>
+      <div class="role">Principal</div>
+      <p>Leads academic curriculum, research quality initiatives, and overall operations.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">T</div>
+      <h3>THASNIM</h3>
+      <div class="role">Vice Principal</div>
+      <p>Directs academic coordination, faculty development, and student academic progress.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">M</div>
+      <h3>MAZIN</h3>
+      <div class="role">Registrar</div>
+      <p>Coordinates university records, admissions governance, and regulatory compliances.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">A</div>
+      <h3>AFIZA</h3>
+      <div class="role">Administrative Officer</div>
+      <p>Supervises campus office operations, student services, and facility management.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">M</div>
+      <h3>MOHAMED</h3>
+      <div class="role">Dean – Academics</div>
+      <p>Guides outcome-based education, new program implementations, and accreditation.</p>
+    </div>
+
+    <div class="admin-card">
+      <div class="admin-photo">AN</div>
+      <h3>AMRUN NISHA</h3>
+      <div class="role">Dean – Student Affairs</div>
+      <p>Champions student welfare, campus clubs, counseling services, and hostel life.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- DEPARTMENTS -->
+<section class="dept-section" id="departments">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Schools & Faculties</div>
+    <h2>Our 20 Academic Departments</h2>
+    <p>Explore comprehensive disciplines led by distinguished HODs, advanced research labs, and dedicated placement training.</p>
+  </div>
+
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="departmentSearch" onkeyup="filterDepartments()" placeholder="Search department, course, or HOD name...">
+  </div>
+
+  <div class="dept-filter-tags">
+    <button class="dept-filter-btn active" onclick="filterByTag('all', this)">All (20)</button>
+    <button class="dept-filter-btn" onclick="filterByTag('Engineering', this)">Engineering & Tech</button>
+    <button class="dept-filter-btn" onclick="filterByTag('Computer', this)">Computing & IT</button>
+    <button class="dept-filter-btn" onclick="filterByTag('Management', this)">Commerce & Management</button>
+    <button class="dept-filter-btn" onclick="filterByTag('Science', this)">Sciences & Arts</button>
+  </div>
+
+  <div class="dept-grid" id="deptGrid"></div>
+</div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs-section" id="programs">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Degree Offerings</div>
+    <h2>Featured Academic Programs</h2>
+    <p>Industry-aligned degrees designed to empower future tech leaders, corporate innovators, and scholars.</p>
+  </div>
+  <div class="program-grid">
+    <div class="program">
+      <span class="prog-badge">Undergraduate • 3 Years</span>
+      <h3>BCA (Computer Applications)</h3>
+      <p>Comprehensive training in Python, Full Stack Web Development, Cloud Computing, AI basics, and Database Management.</p>
+      <div class="prog-meta">
+        <span>Eligibility: 10+2 with Maths/CS</span>
+        <span>Admissions Open</span>
+      </div>
+    </div>
+
+    <div class="program">
+      <span class="prog-badge">Undergraduate • 3 Years</span>
+      <h3>B.Sc Computer Science</h3>
+      <p>Core algorithmic foundations, data structures, software engineering, machine learning, and operating systems.</p>
+      <div class="prog-meta">
+        <span>Eligibility: 10+2 Science</span>
+        <span>Admissions Open</span>
+      </div>
+    </div>
+
+    <div class="program">
+      <span class="prog-badge">Undergraduate • 3 Years</span>
+      <h3>BBA (Business Administration)</h3>
+      <p>Practical business strategy, international marketing, fintech, human resource dynamics, and startup incubation.</p>
+      <div class="prog-meta">
+        <span>Eligibility: 10+2 Any Stream</span>
+        <span>Admissions Open</span>
+      </div>
+    </div>
+
+    <div class="program">
+      <span class="prog-badge">Undergraduate • 3 Years</span>
+      <h3>B.Com (General & CA)</h3>
+      <p>Corporate accounting, financial analytics, taxation, banking regulations, and commercial law frameworks.</p>
+      <div class="prog-meta">
+        <span>Eligibility: 10+2 with Commerce/Maths</span>
+        <span>Admissions Open</span>
+      </div>
+    </div>
+
+    <div class="program">
+      <span class="prog-badge">Postgraduate • 2 Years</span>
+      <h3>MCA (Master of Computer Apps)</h3>
+      <p>Advanced system design, Artificial Intelligence, Cybersecurity, DevOps, Mobile Architectures, and Industry Internship.</p>
+      <div class="prog-meta">
+        <span>Eligibility: Any Degree with Maths</span>
+        <span>Admissions Open</span>
+      </div>
+    </div>
+
+    <div class="program">
+      <span class="prog-badge">Professional & Engineering • 4 Years</span>
+      <h3>B.E / B.Tech Programs</h3>
+      <p>Four-year professional degrees in Mechanical, Civil, ECE, and EEE with hands-on lab projects and corporate tie-ups.</p>
+      <div class="prog-meta">
+        <span>Eligibility: 10+2 PCM</span>
+        <span>Admissions Open</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- PLACEMENTS & RECRUITERS -->
+<section class="placements" id="placements">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Career & Corporate Relations</div>
+    <h2>Training & Placement Cell</h2>
+    <p>Consistently connecting HNU graduates with Fortune 500 giants and top Indian corporate leaders.</p>
+  </div>
+
+  <div class="placement-stats-box">
+    <div class="placement-stat">
+      <h4>₹24 LPA</h4>
+      <p>Highest International Offer</p>
+    </div>
+    <div class="placement-stat">
+      <h4>₹6.2 LPA</h4>
+      <p>Average Salary Package</p>
+    </div>
+    <div class="placement-stat">
+      <h4>150+</h4>
+      <p>Corporate Hiring Partners</p>
+    </div>
+    <div class="placement-stat">
+      <h4>94%</h4>
+      <p>Students Placed Last Year</p>
+    </div>
+  </div>
+
+  <div class="recruiters-marquee">
+    <div class="recruiter-chip">🏢 Zoho Corporation</div>
+    <div class="recruiter-chip">💼 Tata Consultancy Services (TCS)</div>
+    <div class="recruiter-chip">🚀 Infosys</div>
+    <div class="recruiter-chip">🌐 Wipro Technologies</div>
+    <div class="recruiter-chip">⚡ Cognizant</div>
+    <div class="recruiter-chip">💻 HCL Technologies</div>
+    <div class="recruiter-chip">📊 Accenture</div>
+    <div class="recruiter-chip">📦 Amazon India</div>
+    <div class="recruiter-chip">🏦 HDFC Bank</div>
+    <div class="recruiter-chip">📱 Tech Mahindra</div>
+  </div>
+</div>
+</section>
+
+<!-- FEE & ELIGIBILITY CALCULATOR -->
+<section class="calc-section" id="calculator">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Interactive Tool</div>
+    <h2>Course Fee & Eligibility Calculator</h2>
+    <p>Select your desired degree program to instantly calculate eligibility requirements, duration, and fee structure.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="calc-grid">
+      <div class="calc-form">
+        <label style="font-weight:700;display:block;margin-bottom:6px;color:var(--navy)">Select Academic Program:</label>
+        <select id="calcProgram" onchange="calculateFee()">
+          <option value="bca">BCA - Bachelor of Computer Applications</option>
+          <option value="bsc_cs">B.Sc Computer Science</option>
+          <option value="bba">BBA - Bachelor of Business Administration</option>
+          <option value="bcom">B.Com - Commerce</option>
+          <option value="mca">MCA - Master of Computer Applications</option>
+          <option value="be_mech">B.E Mechanical Engineering</option>
+          <option value="be_ece">B.E Electronics & Communication</option>
+          <option value="be_civil">B.E Civil Engineering</option>
+          <option value="law">LL.B / Legal Studies</option>
+        </select>
+
+        <label style="font-weight:700;display:block;margin-bottom:6px;color:var(--navy)">Hostel Accommodation Required?</label>
+        <select id="calcHostel" onchange="calculateFee()">
+          <option value="no">No (Day Scholar / University Bus)</option>
+          <option value="yes">Yes (AC / Non-AC Campus Hostel & Mess)</option>
+        </select>
+
+        <div style="margin-top:15px">
+          <a href="#admissions" class="btn" style="width:100%;justify-content:center">Proceed to Apply</a>
+        </div>
+      </div>
+
+      <div class="calc-result" id="calcResultDisplay">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CAMPUS FACILITIES -->
+<section class="facilities-section" id="facilities">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">World-Class Infrastructure</div>
+    <h2>Campus Facilities & Life</h2>
+    <p>Modern amenities supporting academic excellence, research innovation, fitness, and community living.</p>
+  </div>
+
+  <div class="facilities-grid">
+    <div class="facility-card">
+      <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Smart Laboratories">
+      <div class="facility-body">
+        <h3>🔬 High-Tech Research Labs</h3>
+        <p>Specialized computing centers, IoT hardware labs, AI workstations, and robotics fabrication units.</p>
+      </div>
+    </div>
+
+    <div class="facility-card">
+      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=800&q=80" alt="Central Digital Library">
+      <div class="facility-body">
+        <h3>📖 Central Digital Library</h3>
+        <p>Over 40,000 physical volumes, subscriptions to IEEE/Elsevier journals, and 24/7 quiet study zones.</p>
+      </div>
+    </div>
+
+    <div class="facility-card">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Sports & Gymnasium">
+      <div class="facility-body">
+        <h3>⚽ Sports & Fitness Arena</h3>
+        <p>Full-size football ground, cricket nets, indoor badminton & table tennis stadium, and modern gym.</p>
+      </div>
+    </div>
+
+    <div class="facility-card">
+      <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=800&q=80" alt="Student Hostels">
+      <div class="facility-body">
+        <h3>🏡 Secure Hostels (Boys & Girls)</h3>
+        <p>Comfortable rooms, biometric security, hygienic mess serving nutritious food, and high-speed Wi-Fi.</p>
+      </div>
+    </div>
+
+    <div class="facility-card">
+      <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Auditorium">
+      <div class="facility-body">
+        <h3>🎭 Grand Convention Center</h3>
+        <p>1,200-seat acoustic auditorium for international conferences, symposiums, and cultural fests.</p>
+      </div>
+    </div>
+
+    <div class="facility-card">
+      <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80" alt="Transport Fleet">
+      <div class="facility-body">
+        <h3>🚌 Transport Network</h3>
+        <p>Dedicated fleet of buses connecting Ramanathapuram, Paramakudi, Kilakarai, and surrounding districts.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- STUDENT CLUBS -->
+<section class="clubs-section">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Campus Engagement</div>
+    <h2>Student Clubs & Societies</h2>
+    <p>Discover your passion, build leadership skills, and create lifelong memories with HNU student bodies.</p>
+  </div>
+
+  <div class="clubs-grid">
+    <div class="club-card">
+      <span class="club-icon">💻</span>
+      <h3>CodeVanguard Tech Club</h3>
+      <p>Weekly hackathons, open-source projects, and technical coding competitions.</p>
+    </div>
+    <div class="club-card">
+      <span class="club-icon">🎨</span>
+      <h3>Symphony Arts & Culture</h3>
+      <p>Drama, music, photography, and the grand annual HNU cultural festival.</p>
+    </div>
+    <div class="club-card">
+      <span class="club-icon">🚀</span>
+      <h3>E-Cell Innovation Hub</h3>
+      <p>Seed funding support, business pitch mentorship, and startup networking.</p>
+    </div>
+    <div class="club-card">
+      <span class="club-icon">🤝</span>
+      <h3>NSS & Social Outreach</h3>
+      <p>Blood donation camps, environmental drives, and rural education programs.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ADMISSIONS -->
+<section class="admission" id="admissions">
+<div class="container admission-grid">
+  <div>
+    <h2>Admissions Open for Academic Year 2026–27</h2>
+    <p>Take the first step toward a transformative academic journey at HABEEB NIHMATHULLAH UNIVERSITY.</p>
+
+    <div class="admission-perks">
+      <div class="perk-item">✓ Merit Scholarships Up to 100%</div>
+      <div class="perk-item">✓ Zero Cost Registration Assistance</div>
+      <div class="perk-item">✓ Dedicated Career Counseling</div>
+      <div class="perk-item">✓ Lateral Entry for Diploma Holders</div>
+    </div>
+
+    <div class="admission-photo">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85"
+        alt="Students at university"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=85';">
+    </div>
+  </div>
+
+  <div class="form-box">
+    <h3>Online Admission Enquiry</h3>
+    <p class="subtitle">Fill out the details below. Our admissions directorate will contact you within 24 hours.</p>
+    <form id="enquiryForm" onsubmit="submitEnquiry(event)">
+      <input required id="appFullName" placeholder="Student Full Name">
+      <input required id="appEmail" type="email" placeholder="Email Address">
+      <input required id="appPhone" type="tel" placeholder="Mobile Number (e.g. 9876543210)">
+      <select required id="appProgram">
+        <option value="">Select Intended Degree Program</option>
+        <option>BCA - Computer Applications</option>
+        <option>B.Sc Computer Science</option>
+        <option>BBA - Business Administration</option>
+        <option>B.Com - Commerce</option>
+        <option>MCA - Master of Computer Applications</option>
+        <option>B.E Mechanical Engineering</option>
+        <option>B.E Electronics & Communication</option>
+        <option>B.E Civil Engineering</option>
+        <option>B.E Electrical & Electronics</option>
+        <option>LL.B / Legal Studies</option>
+        <option>Other Department Program</option>
+      </select>
+      <textarea id="appMessage" placeholder="Any specific questions about fees, scholarships, or hostel accommodation?"></textarea>
+      <button class="btn" type="submit" style="width:100%;justify-content:center">Submit Application Enquiry</button>
+    </form>
+  </div>
+</div>
+</section>
+
+<!-- NEWS & EVENTS -->
+<section class="news" id="news">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">HNU Updates</div>
+    <h2>Latest Campus News & Notices</h2>
+    <p>Stay updated with academic bulletins, campus highlights, and upcoming milestones.</p>
+  </div>
+
+  <div class="news-grid">
+    <article class="news-card">
+      <img
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=85"
+        alt="Admissions Open"
+        onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=85';">
+      <div class="news-body">
+        <div class="news-date">07 SEP 2026 • ADMISSIONS</div>
+        <h3>Admissions Open 2026–27</h3>
+        <p>Applications are officially open for UG and PG programs. Merit scholarship test dates announced.</p>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=900&q=85"
+           alt="University Orientation">
+      <div class="news-body">
+        <div class="news-date">05 SEP 2026 • ACADEMICS</div>
+        <h3>University Orientation Day</h3>
+        <p>Welcoming our incoming cohort with campus tours, mentorship sessions, and departmental briefings.</p>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
+           alt="Digital Campus">
+      <div class="news-body">
+        <div class="news-date">01 SEP 2026 • INNOVATION</div>
+        <h3>Next-Gen AI & Robotics Lab Launch</h3>
+        <p>New high-performance computing systems deployed for student research in computer vision and robotics.</p>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Success Stories</div>
+    <h2>What Our Students & Alumni Say</h2>
+    <p>Hear how Habeeb Nihmathullah University transformed their career trajectories.</p>
+  </div>
+
+  <div class="test-grid">
+    <div class="test-card">
+      <p class="test-quote">"The hands-on coding labs and supportive faculty at HNU gave me the confidence to crack interviews at top product companies. I secured an offer with Zoho right in my final semester!"</p>
+      <div class="test-author">
+        <div class="test-avatar">AR</div>
+        <div class="test-info">
+          <h4>Abdul Rahman</h4>
+          <p>BCA Graduate • Software Engineer at Zoho</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-card">
+      <p class="test-quote">"The infrastructure, library resources, and dedicated HOD mentorship in Computer Science are top tier. HNU doesn't just teach theory; they teach how to build real solutions."</p>
+      <div class="test-author">
+        <div class="test-avatar">FA</div>
+        <div class="test-info">
+          <h4>Farhana Anjum</h4>
+          <p>B.Sc CS • Cloud Associate at TCS</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="test-card">
+      <p class="test-quote">"Coming from Ramanathapuram, having a university with world-class faculty and great campus life right here was a blessing. The business seminars and E-Cell prepared me to launch my own firm."</p>
+      <div class="test-author">
+        <div class="test-avatar">SK</div>
+        <div class="test-info">
+          <h4>Syed Khaleel</h4>
+          <p>BBA Graduate • Founder, Apex Tech Logistics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FAQ ACCORDION -->
+<section class="faq-section" id="faq">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Got Questions?</div>
+    <h2>Frequently Asked Questions</h2>
+    <p>Find quick answers regarding admissions, fees, hostel, bus routes, and scholarships.</p>
+  </div>
+
+  <div class="faq-wrap">
+    <div class="faq-item active">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>How do I apply for admission at HNU?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        You can submit the Online Admission Enquiry form on this website or visit the Admissions Directorate at our Ramanathapuram campus. Our team will verify your eligibility and guide you through document submission and enrollment.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Are merit scholarships available for students?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        Yes! HNU offers merit scholarships granting up to 100% tuition fee waiver for students with outstanding marks in 10+2 / Diploma examinations, as well as sports achievements and economically weaker sections.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Are hostel facilities available for both boys and girls?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, we offer separate, fully guarded residential hostels for boys and girls with 24/7 CCTV surveillance, biometric security, RO purified water, Wi-Fi, study halls, and nutritious multi-cuisine dining.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>What areas are covered by the university bus service?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        University buses ply across major routes covering Ramanathapuram town, Paramakudi, Kilakarai, Mandapam, Rameswaram, Sayalgudi, and surrounding suburban stops with tracking and safety supervisors.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question" onclick="toggleFaq(this)">
+        <span>Can I pay university fees in installments?</span>
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-answer">
+        Yes, the university allows term-wise and semester-wise installment options. Education loan support documentation is also issued to students wishing to apply for bank loans.
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<div class="container">
+  <div class="section-head">
+    <div class="section-tag">Get in Touch</div>
+    <h2>Contact Habeeb Nihmathullah University</h2>
+    <p>We are here to assist with your academic inquiries, campus visits, and career admissions.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-box">
+      <h3>🏛️ Campus Directorate</h3>
+      <p><strong>HABEEB NIHMATHULLAH UNIVERSITY (HNU)</strong></p>
+      <p>📍 Ramanathapuram Main Campus, Tamil Nadu, India</p>
+      <p>📞 Admission Helpline: <strong>6374320835</strong></p>
+      <p>✉ Official Email: <strong>habeebnihmathullah@gmail.com</strong></p>
+
+      <div class="contact-routes">
+        <strong>🚌 Transport Connectivity:</strong>
+        <span>Just 10 minutes from Ramanathapuram Central Bus Stand & Railway Station. Accessible via National Highway.</span>
+      </div>
+    </div>
+
+    <div class="contact-box">
+      <h3>⏰ Directorate Hours</h3>
+      <p><strong>Monday – Friday:</strong> 9:00 AM – 5:00 PM</p>
+      <p><strong>Saturday:</strong> 9:00 AM – 1:00 PM</p>
+      <p><strong>Sunday:</strong> Closed (Online enquiries remain open)</p>
+      <p style="margin-top:16px;color:var(--text);font-weight:700">Quick Contact Options:</p>
+      <div style="display:flex;gap:10px;margin-top:10px">
+        <a href="tel:6374320835" class="btn btn-sm">Call Now</a>
+        <a href="https://wa.me/916374320835?text=Hello%20HNU,%20I%20am%20interested%20in%20admission" target="_blank" class="btn btn-sm" style="background:#25D366;color:#fff">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div class="container footer-grid">
+  <div>
+    <h3>HABEEB NIHMATHULLAH UNIVERSITY</h3>
+    <p style="color:var(--gold2);font-weight:700;margin-bottom:8px">Knowledge • Character • Excellence</p>
+    <p>A distinguished center of higher education delivering future-ready undergraduate, postgraduate, and professional degree programs in Ramanathapuram, Tamil Nadu.</p>
+  </div>
+  <div>
+    <h3>Academics</h3>
+    <a href="#departments">20 Departments</a>
+    <a href="#programs">Academic Programs</a>
+    <a href="#calculator">Fee Calculator</a>
+    <a href="#facilities">Research Labs</a>
+  </div>
+  <div>
+    <h3>Admissions</h3>
+    <a href="#admissions">Online Enquiry</a>
+    <a href="javascript:void(0)" onclick="openProspectusModal()">Download Prospectus</a>
+    <a href="#faq">FAQs & Guidelines</a>
+    <a href="#placements">Placement Records</a>
+  </div>
+  <div>
+    <h3>Campus Address</h3>
+    <p>Ramanathapuram, Tamil Nadu, India</p>
+    <p>Phone: 6374320835</p>
+    <p>Email: habeebnihmathullah@gmail.com</p>
+  </div>
+</div>
+<div class="container copy">
+  © 2026 HABEEB NIHMATHULLAH UNIVERSITY (HNU). All Rights Reserved. Demo & Institutional Web Project.
+</div>
+</footer>
+
+<!-- FLOATING QUICK ACTION BUTTONS -->
+<div class="floating-actions">
+  <a href="https://wa.me/916374320835?text=Hello%20HNU,%20I%20want%20to%20know%20about%20admissions" target="_blank" class="float-btn float-whatsapp" title="Chat on WhatsApp">💬</a>
+  <a href="tel:6374320835" class="float-btn float-call" title="Call Admissions">📞</a>
+  <div class="float-btn float-top" id="backToTop" onclick="scrollToTop()" title="Back to top">↑</div>
+</div>
+
+<!-- DEPARTMENT DETAIL MODAL -->
+<div class="modal" id="deptModal">
+<div class="modal-box">
+  <div class="modal-head">
+    <div class="icon" id="detailIcon"></div>
+    <div>
+      <h2 id="detailName"></h2>
+      <p id="detailHod" style="color:var(--gold2);font-weight:700"></p>
+    </div>
+    <span class="close" onclick="closeModal('deptModal')">×</span>
+  </div>
+  <div class="modal-body">
+    <div class="detail-box">
+      <h4>About Department</h4>
+      <p id="detailAbout"></p>
+    </div>
+    <div class="detail-grid">
+      <div class="detail-box"><h4>Offered Degrees</h4><ul id="detailPrograms"></ul></div>
+      <div class="detail-box"><h4>Specialized Facilities</h4><ul id="detailFacilities"></ul></div>
+      <div class="detail-box"><h4>Career Opportunities</h4><ul id="detailCareers"></ul></div>
+      <div class="detail-box"><h4>Admission Status</h4><p>Applications open for 2026–27 batch. Merit scholarship applicable.</p></div>
+    </div>
+    <div class="modal-actions">
+      <a href="#admissions" onclick="closeModal('deptModal')" class="btn">Apply for this Department</a>
+      <button onclick="closeModal('deptModal')" class="btn outline" style="color:var(--navy);border-color:var(--navy)">Close</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ADMISSION RECEIPT / CONFIRMATION MODAL -->
+<div class="modal" id="receiptModal">
+<div class="modal-box" style="max-width:560px">
+  <div class="modal-head">
+    <div class="icon">🎓</div>
+    <div>
+      <h2>Application Submitted!</h2>
+      <p style="color:var(--gold2)">Habeeb Nihmathullah University Admissions</p>
+    </div>
+    <span class="close" onclick="closeModal('receiptModal')">×</span>
+  </div>
+  <div class="modal-body receipt-box">
+    <div class="receipt-icon">✓</div>
+    <h3 style="color:var(--navy);margin-bottom:6px">Thank You, <span id="recName">Student</span>!</h3>
+    <p style="color:var(--muted);font-size:14px">Your admission enquiry has been officially logged in our campus portal.</p>
+
+    <div class="receipt-card">
+      <div class="receipt-row">
+        <span>Application Tracking ID:</span>
+        <span class="receipt-id" id="recId">HNU-2026-0000</span>
+      </div>
+      <div class="receipt-row">
+        <span>Selected Program:</span>
+        <strong id="recProgram">Program</strong>
+      </div>
+      <div class="receipt-row">
+        <span>Contact Phone:</span>
+        <strong id="recPhone">Phone</strong>
+      </div>
+      <div class="receipt-row">
+        <span>Status:</span>
+        <span style="color:var(--success);font-weight:700">Verified & In Review</span>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);margin-bottom:20px">
+      Our Admissions Director will review your details and contact you within 24 business hours to assist with scholarship allotment and document counseling.
+    </p>
+
+    <button onclick="window.print()" class="btn" style="margin-right:10px">🖨️ Print Receipt</button>
+    <button onclick="closeModal('receiptModal')" class="btn outline" style="color:var(--navy);border-color:var(--navy)">Done</button>
+  </div>
+</div>
+</div>
+
+<!-- PROSPECTUS MODAL -->
+<div class="modal" id="prospectusModal">
+<div class="modal-box">
+  <div class="modal-head">
+    <div class="icon">📘</div>
+    <div>
+      <h2>University Prospectus 2026–27</h2>
+      <p style="color:var(--gold2)">Official Information Brochure</p>
+    </div>
+    <span class="close" onclick="closeModal('prospectusModal')">×</span>
+  </div>
+  <div class="modal-body">
+    <div class="prospectus-cover">
+      <h2 style="color:var(--gold2);margin-bottom:8px">HABEEB NIHMATHULLAH UNIVERSITY</h2>
+      <p style="letter-spacing:1px;font-size:13px">RAMANATHAPURAM, TAMIL NADU • PIN 623501</p>
+      <p style="margin-top:12px;font-size:14px">Official Academic & Admissions Handbook for Academic Year 2026–2027</p>
+    </div>
+
+    <div class="detail-grid">
+      <div class="detail-box">
+        <h4>🏛️ Institutional Highlights</h4>
+        <ul>
+          <li>20 Multidisciplinary Departments</li>
+          <li>Highest salary package of ₹24 LPA</li>
+          <li>Over 50+ High-tech research laboratories</li>
+          <li>Accredited faculty with industry credentials</li>
+        </ul>
+      </div>
+      <div class="detail-box">
+        <h4>📋 Admission Guidelines</h4>
+        <ul>
+          <li>Direct merit-based counseling for 10+2 grads</li>
+          <li>Lateral entry admissions for Diploma holders</li>
+          <li>Up to 100% fee waivers for rank holders</li>
+          <li>On-campus hostel and bus reservation</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modal-actions" style="justify-content:center">
+      <button onclick="window.print()" class="btn">🖨️ Print / Save Prospectus PDF</button>
+      <a href="#admissions" onclick="closeModal('prospectusModal')" class="btn" style="background:var(--navy);color:#fff">Apply Now</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// 20 UNIVERSITY DEPARTMENTS DATA
+const departments=[
+{name:"Computer Applications",tag:"Computer",icon:"💻",hod:"NASKATH",about:"Focuses on computer applications, programming, databases and software development.",programs:["BCA","MCA","Application Development"],facilities:["Computer Lab","Programming Lab","High-Speed Internet Facility"],careers:["Software Developer","Web Developer","Application Support"]},
+{name:"Computer Science",tag:"Computer",icon:"🖥️",hod:"HAFIK",about:"Covers algorithms, computing theory, software systems and modern computer technologies.",programs:["B.Sc Computer Science","M.Sc Computer Science"],facilities:["Advanced Computer Lab","AI Lab","Software Systems Lab"],careers:["Software Engineer","System Analyst","Data Analyst"]},
+{name:"Information Technology",tag:"Computer",icon:"🌐",hod:"AMEEN",about:"Focuses on information systems, networking, cloud computing and digital technologies.",programs:["B.Sc IT","IT Professional Programs"],facilities:["Networking Lab","Cloud Computing Lab","Cyber Security Lab"],careers:["Cloud Engineer","Network Administrator","IT Support"]},
+{name:"Commerce",tag:"Management",icon:"💰",hod:"FATHIYA",about:"Develops knowledge in accounting, finance, taxation and modern commerce.",programs:["B.Com (General)","B.Com (Computer Applications)"],facilities:["Commerce Lab","Digital Library","Tally Accounting Lab"],careers:["Chartered Accountant","Banking Executive","Financial Analyst"]},
+{name:"Business Administration",tag:"Management",icon:"📈",hod:"MADEEN",about:"Prepares students for business, marketing, entrepreneurship and organizational roles.",programs:["BBA (General)","Business Management"],facilities:["Business Lab","Seminar Hall","Entrepreneurship Incubation Cell"],careers:["Business Executive","Marketing Specialist","Startup Entrepreneur"]},
+{name:"Management",tag:"Management",icon:"🏢",hod:"HAJA",about:"Builds managerial, leadership and organizational decision-making skills.",programs:["Management Studies","MBA-oriented Foundation"],facilities:["Management Lab","Conference Hall","Corporate Library"],careers:["HR Executive","Operations Manager","Management Trainee"]},
+{name:"Mathematics",tag:"Science",icon:"∑",hod:"MARSATH",about:"Develops analytical, mathematical and problem-solving skills.",programs:["B.Sc Mathematics","Applied Mathematics"],facilities:["Math Lab","Digital Learning Center","Research Support"],careers:["Data Analyst","Actuary","Mathematics Educator"]},
+{name:"Physics",tag:"Science",icon:"⚛️",hod:"SHEIK",about:"Explores physical sciences, experimental methods and scientific principles.",programs:["B.Sc Physics","Applied Physics"],facilities:["Optics Lab","Electronics Lab","Spectroscopy Facility"],careers:["Lab Assistant","Scientific Officer","Research Assistant"]},
+{name:"Chemistry",tag:"Science",icon:"🧪",hod:"AMSAATH",about:"Covers chemical science, laboratory techniques and applied chemistry.",programs:["B.Sc Chemistry","Applied Chemistry"],facilities:["Organic Chemistry Lab","Instrumentation Lab","Analytical Facility"],careers:["Industrial Chemist","Lab Technician","Quality Analyst"]},
+{name:"English",tag:"Science",icon:"📚",hod:"YASMIN",about:"Develops language, communication, literature and professional writing skills.",programs:["B.A English","English Communication"],facilities:["Digital Language Lab","Audio-Visual Studio","Literary Library"],careers:["Content Writer","Corporate Trainer","Language Educator"]},
+{name:"Civil Engineering",tag:"Engineering",icon:"🏗️",hod:"KALIL",about:"Focuses on construction, infrastructure, structural and environmental engineering.",programs:["B.E Civil Engineering"],facilities:["Strength of Materials Lab","Survey Lab","Concrete & Highway Lab"],careers:["Civil Engineer","Structural Designer","Site Supervisor"]},
+{name:"Mechanical Engineering",tag:"Engineering",icon:"⚙️",hod:"MOHAMED",about:"Covers machines, manufacturing, thermal dynamics and mechanical design.",programs:["B.E Mechanical Engineering"],facilities:["CAD/CAM Lab","Thermal Engineering Lab","Workshop Machine Shop"],careers:["Mechanical Engineer","Design Engineer","Automobile Engineer"]},
+{name:"Electrical & Electronics",tag:"Engineering",icon:"⚡",hod:"SHEIK",about:"Focuses on electrical systems, power generation, control and electronic applications.",programs:["B.E EEE"],facilities:["Power Systems Lab","Control Engineering Lab","Machines Lab"],careers:["Electrical Engineer","Power Systems Engineer","Control Specialist"]},
+{name:"Electronics & Communication",tag:"Engineering",icon:"📡",hod:"AMEEN",about:"Covers electronics, communication systems, embedded technologies and VLSI design.",programs:["B.E ECE"],facilities:["Communication Lab","Embedded Systems Lab","VLSI & DSP Lab"],careers:["ECE Engineer","Embedded Systems Developer","Telecom Engineer"]},
+{name:"Biotechnology",tag:"Science",icon:"🧬",hod:"AMSAATH",about:"Explores biological sciences, genetic engineering and clinical laboratory research.",programs:["B.Sc Biotechnology","Applied Biotechnology"],facilities:["Microbiology Lab","Bioinformatics Lab","Plant Tissue Culture"],careers:["Biotechnologist","Clinical Research Associate","Lab Chemist"]},
+{name:"Psychology",tag:"Science",icon:"🧠",hod:"NASRIN",about:"Studies human behaviour, cognition, counseling and psychological well-being.",programs:["B.A Psychology","Applied Psychology"],facilities:["Psychology Lab","Counseling Room","Observation Suite"],careers:["Counselor","HR Specialist","Child Development Worker"]},
+{name:"Geography",tag:"Science",icon:"🌍",hod:"HARSHA",about:"Studies physical geography, spatial cartography, GIS systems and environment.",programs:["B.A Geography","Environmental Studies"],facilities:["GIS Lab","Cartography Studio","Field Research Center"],careers:["GIS Specialist","Cartographer","Survey Officer"]},
+{name:"History",tag:"Science",icon:"🏛️",hod:"MARSATH",about:"Explores historical civilizations, archaeology, heritage studies and museology.",programs:["B.A History","Heritage Studies"],facilities:["History Archive","Artifact Repository","Digital Library"],careers:["Historian","Museum Curator","Civil Services Aspirant"]},
+{name:"Law",tag:"Management",icon:"⚖️",hod:"MADEEN",about:"Introduces legal frameworks, constitutional rights, jurisprudence and advocacy.",programs:["LL.B / Legal Studies Foundation"],facilities:["Moot Court Hall","Law Library","Legal Aid Clinic"],careers:["Legal Advisor","Corporate Compliance Officer","Advocate"]},
+{name:"Visual Communication",tag:"Science",icon:"🎨",hod:"YASMIN",about:"Combines visual storytelling, graphic design, cinematography and digital media.",programs:["B.Sc Visual Communication","Digital Media Studies"],facilities:["Photography Studio","Editing Suite (Apple Mac)","Sound Lab"],careers:["Graphic Designer","Video Editor","Media Producer"]}
+];
+
+// RENDER DEPARTMENTS
+function renderDepartments(list=departments){
+  const grid=document.getElementById("deptGrid");
+  if(!grid) return;
+  if(list.length===0){
+    grid.innerHTML=`<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--muted)">No departments matched your search. Try another keyword!</div>`;
+    return;
+  }
+  grid.innerHTML=list.map((d)=>{
+    const origIndex=departments.indexOf(d);
+    return `
+    <div class="dept-card" onclick="showDepartment(${origIndex})">
+      <div class="dept-icon">${d.icon}</div>
+      <h3>${d.name}</h3>
+      <div class="hod-badge">HOD: ${d.hod}</div>
+      <p>${d.about}</p>
+      <div class="click-hint">View Courses & Labs →</div>
+    </div>`;
+  }).join("");
+}
+renderDepartments();
+
+// SEARCH DEPARTMENTS
+function filterDepartments(){
+  const s=document.getElementById("departmentSearch").value.toLowerCase();
+  const filtered=departments.filter(d=>
+    d.name.toLowerCase().includes(s) ||
+    d.hod.toLowerCase().includes(s) ||
+    d.programs.some(p=>p.toLowerCase().includes(s))
+  );
+  renderDepartments(filtered);
+}
+
+// FILTER BY TAG
+function filterByTag(tag, btn){
+  document.querySelectorAll(".dept-filter-btn").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  if(tag==='all'){
+    renderDepartments(departments);
+  } else {
+    const filtered=departments.filter(d=>d.tag===tag || d.name.includes(tag));
+    renderDepartments(filtered);
+  }
+}
+
+// SHOW DEPARTMENT MODAL
+function showDepartment(i){
+  const d=departments[i];
+  document.getElementById("detailIcon").innerText=d.icon;
+  document.getElementById("detailName").innerText=d.name;
+  document.getElementById("detailHod").innerText="Head of Department: "+d.hod;
+  document.getElementById("detailAbout").innerText=d.about;
+  document.getElementById("detailPrograms").innerHTML=d.programs.map(x=>`<li>${x}</li>`).join("");
+  document.getElementById("detailFacilities").innerHTML=d.facilities.map(x=>`<li>${x}</li>`).join("");
+  document.getElementById("detailCareers").innerHTML=d.careers.map(x=>`<li>${x}</li>`).join("");
+  document.getElementById("deptModal").style.display="block";
+  document.body.style.overflow="hidden";
+}
+
+// CLOSE MODAL
+function closeModal(id){
+  document.getElementById(id).style.display="none";
+  document.body.style.overflow="";
+}
+
+// PROSPECTUS MODAL
+function openProspectusModal(){
+  document.getElementById("prospectusModal").style.display="block";
+  document.body.style.overflow="hidden";
+}
+
+// WINDOW CLICK TO CLOSE MODALS
+window.onclick=e=>{
+  if(e.target.classList.contains("modal")){
+    e.target.style.display="none";
+    document.body.style.overflow="";
+  }
+};
+
+// MOBILE MENU
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("show");
+}
+document.querySelectorAll("nav a").forEach(a=>{
+  a.addEventListener("click",()=>document.getElementById("nav").classList.remove("show"));
+});
+
+// FAQ ACCORDION TOGGLE
+function toggleFaq(el){
+  const item=el.parentElement;
+  const wasActive=item.classList.contains("active");
+  document.querySelectorAll(".faq-item").forEach(i=>i.classList.remove("active"));
+  if(!wasActive) item.classList.add("active");
+}
+
+// FEE & ELIGIBILITY CALCULATOR DATA
+const feeData={
+  bca:{name:"BCA (Computer Applications)",duration:"3 Years (6 Semesters)",eligibility:"10+2 with Mathematics / Computer Science (Min 50%)",tuition:"₹24,000 / semester",examFee:"₹1,500 / semester"},
+  bsc_cs:{name:"B.Sc Computer Science",duration:"3 Years (6 Semesters)",eligibility:"10+2 with Physics, Chemistry & Mathematics / CS",tuition:"₹22,000 / semester",examFee:"₹1,500 / semester"},
+  bba:{name:"BBA (Business Administration)",duration:"3 Years (6 Semesters)",eligibility:"10+2 from any recognized board (Min 45%)",tuition:"₹20,000 / semester",examFee:"₹1,500 / semester"},
+  bcom:{name:"B.Com (Commerce / CA)",duration:"3 Years (6 Semesters)",eligibility:"10+2 with Commerce / Mathematics / Economics",tuition:"₹19,000 / semester",examFee:"₹1,500 / semester"},
+  mca:{name:"MCA (Master of Computer Applications)",duration:"2 Years (4 Semesters)",eligibility:"BCA / B.Sc CS / Degree with Mathematics at 10+2 or Degree level",tuition:"₹32,000 / semester",examFee:"₹2,000 / semester"},
+  be_mech:{name:"B.E Mechanical Engineering",duration:"4 Years (8 Semesters)",eligibility:"10+2 with Physics, Chemistry & Mathematics (PCM)",tuition:"₹38,000 / semester",examFee:"₹2,000 / semester"},
+  be_ece:{name:"B.E Electronics & Communication",duration:"4 Years (8 Semesters)",eligibility:"10+2 with Physics, Chemistry & Mathematics (PCM)",tuition:"₹38,000 / semester",examFee:"₹2,000 / semester"},
+  be_civil:{name:"B.E Civil Engineering",duration:"4 Years (8 Semesters)",eligibility:"10+2 with Physics, Chemistry & Mathematics (PCM)",tuition:"₹36,000 / semester",examFee:"₹2,000 / semester"},
+  law:{name:"LL.B / Legal Studies",duration:"3 Years (6 Semesters)",eligibility:"Undergraduate degree in any discipline (Min 45%)",tuition:"₹26,000 / semester",examFee:"₹1,800 / semester"}
+};
+
+function calculateFee(){
+  const progKey=document.getElementById("calcProgram").value;
+  const hostel=document.getElementById("calcHostel").value;
+  const p=feeData[progKey];
+  const hostelCost = (hostel==="yes") ? "₹28,000 / semester (Includes Room & Dining)" : "₹0 (Day Scholar / Transport option available)";
+
+  const out=document.getElementById("calcResultDisplay");
+  out.innerHTML=`
+    <h4>Summary for ${p.name}</h4>
+    <div class="calc-row"><span>Program Duration:</span><strong>${p.duration}</strong></div>
+    <div class="calc-row"><span>Eligibility:</span><strong style="text-align:right;max-width:60%">${p.eligibility}</strong></div>
+    <div class="calc-row"><span>Tuition Fee:</span><strong style="color:var(--gold)">${p.tuition}</strong></div>
+    <div class="calc-row"><span>Examination Fee:</span><strong>${p.examFee}</strong></div>
+    <div class="calc-row"><span>Hostel / Boarding:</span><strong>${hostelCost}</strong></div>
+    <div class="calc-row highlight"><span>Scholarship Eligibility:</span><span style="color:var(--success)">Up to 100% Fee Waiver*</span></div>
+    <p style="font-size:11px;color:var(--muted);margin-top:10px">*Scholarships awarded based on 10+2 marks & sports achievements.</p>
+  `;
+}
+calculateFee();
+
+// SUBMIT ADMISSION ENQUIRY
+function submitEnquiry(e){
+  e.preventDefault();
+  const name=document.getElementById("appFullName").value;
+  const phone=document.getElementById("appPhone").value;
+  const prog=document.getElementById("appProgram").value;
+
+  // Generate official ID
+  const randomNum=Math.floor(1000 + Math.random() * 9000);
+  const appId="HNU-2026-"+randomNum;
+
+  document.getElementById("recName").innerText=name;
+  document.getElementById("recId").innerText=appId;
+  document.getElementById("recProgram").innerText=prog;
+  document.getElementById("recPhone").innerText=phone;
+
+  document.getElementById("receiptModal").style.display="block";
+  document.body.style.overflow="hidden";
+  e.target.reset();
+}
+
+// BACK TO TOP SCROLL
+window.onscroll=function(){
+  const b=document.getElementById("backToTop");
+  if(window.scrollY > 400){
+    b.style.display="grid";
+  } else {
+    b.style.display="none";
+  }
+};
+function scrollToTop(){
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
